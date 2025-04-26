@@ -1,0 +1,43 @@
+/*
+Theme Name: Glimtin Theme
+Description: Theme for the Glimtin website
+Author: Team 1
+Version: 1.0
+Tags: modern, fancy, technology
+*/
+
+/* Global Styles */
+:root {
+	--primary-color: #9F9BEC;
+	--secondary-color: #F4E4FC;
+	--background-color: #FCFBFF;
+	--primary-text-color: #ffffff;
+	--secondary-text-color: #111111;
+	--body-font-family: 'Karla', sans-serif;
+	--headings-font-family: 'Exo 2', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--body-font-family);
+	background-color: var(--background-color);
+	color: var(--secondary-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--headings-font-family);
+}
+
+/* Main Styles */
+.main {
+	padding: 2.5em 1.25em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.page-heading {
+	font-size: 2em;
+}

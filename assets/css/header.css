@@ -1,0 +1,27 @@
+/* Header Styles */
+.header {
+	background-color: var(--primary-color);
+	color: var(--primary-text-color);
+	padding: 1.25em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	width: 200px;
+	height: auto;
+}
+
+.header__nav {
+	display: flex;
+	gap: 1.25em;
+	align-items: center;
+}
+
+.header__nav--btn {
+	padding: 0.375em 1.125em;
+	border: 1.5px solid var(--primary-text-color);
+	border-radius: 20px;
+	cursor: pointer;
+}
