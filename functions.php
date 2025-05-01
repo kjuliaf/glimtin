@@ -1,6 +1,6 @@
 <?php
 
-/* Title Tag and Thumbnails */
+/* Title Tag */
 function glimtin_setup() {
 	add_theme_support('title-tag');
 }
@@ -31,19 +31,15 @@ function glimtin_enqueue_page_styles() {
     if (is_page('Startsida')) {
         wp_enqueue_style('front-page-style', get_template_directory_uri() . '/assets/css/front-page.css');
     }
-
 	if (is_page('Elever')) {
         wp_enqueue_style('students-style', get_template_directory_uri() . '/assets/css/students.css');
     }
-
 	if (is_page('Företag')) {
         wp_enqueue_style('organizations-style', get_template_directory_uri() . '/assets/css/organizations.css');
     }
-
 	if (is_page('Om oss')) {
         wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/about.css');
     }
-
     if (is_page('Event')) {
         wp_enqueue_style('event-style', get_template_directory_uri() . '/assets/css/events.css');
     }

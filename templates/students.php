@@ -6,7 +6,8 @@ Template Name: Elever
 
 <?php get_header(); ?>
 
-<main class="main">
+<main>
+	<!-- Replace this below when you start working ... -->
 	<h1 class="page-heading"><?php the_title(); ?></h1>
 </main>
 

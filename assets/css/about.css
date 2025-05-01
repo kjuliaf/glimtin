@@ -1,1 +1,20 @@
 /* About Us Page Styles */
+
+/* Remove this below when you start working ... */
+main {
+	padding: 2.5em 1.25em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.page-heading {
+	font-size: 2em;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
