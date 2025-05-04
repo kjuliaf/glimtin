@@ -14,7 +14,7 @@
 	position: relative;
 	width: 100%;
 	min-height: 300px;
-	max-height: 50vh;
+	max-height: 60vh;
 	aspect-ratio: 16 / 9;
 	background-size: cover;
 	background-position: center;
@@ -25,7 +25,7 @@
 }
 
 .hero__text {
-	color: var(--primary-text-color);
+	color: var(--accent-text-color);
 	text-align: center;
 	font-size: var(--hero-text-size);
 	max-width: 600px;
@@ -46,6 +46,7 @@
 
 .partners__title {
 	width: 300px;
+	margin-bottom: 0.5em;
 }
 
 .partners__title-text {
@@ -56,14 +57,15 @@
 .partners__logos {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	margin-right: 2em;
 	margin-left: 2em;
-	gap: clamp(0em, 1vw, 4em);
+	gap: clamp(0em, 6vw, 12em);
 }
 
 .partners__logos-img {
 	width: clamp(50px, 20%, 150px);
-	height: auto;
+	height: 100%;
 }
 
 /* Who Are We Section */
@@ -71,18 +73,18 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 4em 0;
+	margin: 2em 0;
 }
 
 .who-are-we__box {
 	padding: 2em;
 	background-color: var(--secondary-color);
-	width: 80%;
+	width: 65%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-radius: 1em;
+	border-radius: 2.5em;
 	text-align: center;
 }
 
@@ -103,22 +105,37 @@
 }
 
 .who-are-we__img-right {
-	max-width: 250px;
+	max-width: 330px;
 	height: auto;
 	position: absolute;
 	right: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.who-are-we__img-right-1 {
 	z-index: 2;
 }
 
+.who-are-we__img-right-2 {
+	z-index: -1;
+}
+
+.who-are-we__img-right-3 {
+	z-index: 2;
+}
+
+
 .who-are-we__img-left {
-	max-width: 250px;
+	max-width: 330px;
 	height: auto;
 	position: absolute;
 	left: 0;
 	z-index: -1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .who-are-we__img-right {
 		z-index: -1;
 	}
@@ -130,6 +147,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin: 4em 0;
 }
 
 .want-to-know-more__box {
@@ -151,7 +169,7 @@
 }
 
 .want-to-know-more__box-btn {
-	border: 1px solid var(--primary-color);
+	border: 1px solid var(--primary-text-color);
 	padding: 0.5em 1em;
 	border-radius: 1em;
 	text-decoration: none;

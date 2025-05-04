@@ -9,13 +9,16 @@ Tags: modern, fancy, technology
 /* Global Styles */
 :root {
 	/* Change these when colors/fonts are decided ... */
-	--primary-color: #9F9BEC;
-	--secondary-color: #D5D3EA;
-	--background-color: #FCFBFF;
-	--primary-text-color: #ffffff;
+	--primary-color: #EBDDF8;
+	--primary-text-color: #370B5A;
+	--secondary-color: #D3C3E1;
 	--secondary-text-color: #111111;
-	--body-font-family: 'Karla', sans-serif;
-	--headings-font-family: 'Exo 2', sans-serif;
+	--accent-color: #C084FC;
+	--accent-text-color: #FFFFFF;
+	--overlay-color: rgba(76, 38, 115, 0.7);
+	--background-color: #FFFCFC;
+	--headings-font-family: 'Slabo 13px', sans-serif;
+	--body-font-family: 'Work Sans', sans-serif;
 	--headings-font-size: 1.5em;
 	--p-font-size: 1em;
 }
@@ -49,4 +52,9 @@ p {
 .link {
 	text-decoration: underline;
 	text-underline-offset: 4px;
+}
+
+.overlay {
+	border-image: linear-gradient(var(--overlay-color), var(--overlay-color))
+    fill 1;
 }

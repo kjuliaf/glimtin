@@ -5,7 +5,7 @@ get_header();
 
 <main>
 	<!-- Hero Section -->
-	<section class="hero" style="background-image: url('<?php the_field('hero_image'); ?>');">
+	<section class="hero overlay" style="background-image: url('<?php the_field('hero_image'); ?>');">
 		<p class="hero__text"><?php the_field('hero_text'); ?></p>
 	</section>
 
@@ -42,7 +42,11 @@ get_header();
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="Pil" />
 			</a>
 		</div>
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/circuit-right.png" alt="Kretskort figur höger" class="who-are-we__img-right">
+		<div class="who-are-we__img-right">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/circuit-right-1.png" alt="Kretskort figur höger" class="who-are-we__img-right-1">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/circuit-right-2.png" alt="Kretskort figur höger" class="who-are-we__img-right-2">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/circuit-right-3.png" alt="Kretskort figur höger" class="who-are-we__img-right-3">
+		</div>
 	</section>
 
 	<!-- Want To Know More Section -->

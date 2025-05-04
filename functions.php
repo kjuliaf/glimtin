@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'glimtin_enqueue_reset_styles');
 /* CSS Global Styles and Fonts */
 function glimtin_enqueue_styles() {
 	wp_enqueue_style('glimtin-style', get_stylesheet_uri());
-	wp_enqueue_style('glimtin-fonts', 'https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap', array(), null);
+	wp_enqueue_style('glimtin-fonts', 'https://fonts.googleapis.com/css2?family=Slabo+13px&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap', array(), null);
 }
 add_action('wp_enqueue_scripts', 'glimtin_enqueue_styles');	
 
