@@ -12,10 +12,10 @@
 
 			<nav>
 				<ul class="header__nav">
-					<li><a href="<?php echo home_url('/elever'); ?>">Elever</a></li>
-					<li><a href="<?php echo home_url('/foretag'); ?>">Företag</a></li>
-					<li><a href="<?php echo home_url('/om-oss'); ?>">Om oss</a></li>
-					<li class="header__nav--btn"><a href="<?php echo home_url('/event'); ?>">Event</a></li>
+					<li class="header__nav-item <?php if (is_page('elever')) echo 'active'; ?>"><a href="<?php echo home_url('/elever'); ?>">Elever</a></li>
+					<li class="header__nav-item <?php if (is_page('foretag')) echo 'active'; ?>"><a href="<?php echo home_url('/foretag'); ?>">Företag</a></li>
+					<li class="header__nav-item <?php if (is_page('om-oss')) echo 'active'; ?>"><a href="<?php echo home_url('/om-oss'); ?>">Om oss</a></li>
+					<li><a class="header__nav-btn <?php if (is_page('event')) echo 'active'; ?>" href="<?php echo home_url('/event'); ?>">Event</a></li>
 				</ul>
 			</nav>
 		</header>
