@@ -51,3 +51,65 @@ function glimtin_enqueue_scripts() {
 	wp_enqueue_script('glimtin-script', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'glimtin_enqueue_scripts');	
+
+/* Remove Regular Post Type */
+function remove_default_post_type() {
+    remove_menu_page('edit.php');
+}
+add_action('admin_menu', 'remove_default_post_type');
+
+function remove_default_post_type_menu_bar( $wp_admin_bar ) {
+    $wp_admin_bar->remove_node('new-post');
+}
+add_action('admin_bar_menu', 'remove_default_post_type_menu_bar', 999);
+
+function remove_add_new_post_href_in_admin_bar() {
+    ?>
+<script type="text/javascript">
+	function remove_add_new_post_href_in_admin_bar() {
+		var add_new = document.getElementById('wp-admin-bar-new-content');
+		if (!add_new) return;
+		var add_new_a = add_new.getElementsByTagName('a')[0];
+		if (add_new_a) add_new_a.setAttribute('href', '#!');
+	}
+	remove_add_new_post_href_in_admin_bar();
+
+</script>
+<?php
+}
+add_action('admin_footer', 'remove_add_new_post_href_in_admin_bar');
+
+function remove_draft_widget(){
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+}
+add_action('wp_dashboard_setup', 'remove_draft_widget', 999);
+
+function remove_frontend_post_href(){
+    if(is_user_logged_in()) {
+        add_action( 'wp_footer', 'remove_add_new_post_href_in_admin_bar' );
+    }
+}
+add_action('init', 'remove_frontend_post_href');
+
+/* Remove Page and Post Content Editor */
+add_action('admin_init', function () {
+    remove_post_type_support('page', 'editor');
+});
+
+add_action('admin_init', function () {
+    remove_post_type_support('latest_events', 'editor');
+});
+
+add_action('admin_init', function () {
+    remove_post_type_support('upcoming_events', 'editor');
+});
+
+/* Disabling comments */
+add_action('admin_init', function () {
+    foreach (get_post_types() as $post_type) {
+        if (post_type_supports($post_type, 'comments')) {
+            remove_post_type_support($post_type, 'comments');
+        }
+    }
+    remove_menu_page('edit-comments.php');
+});

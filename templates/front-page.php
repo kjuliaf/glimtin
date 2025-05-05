@@ -49,8 +49,48 @@ get_header();
 		</div>
 	</section>
 
+	<!-- Latest Events Section -->
+	<section class="latest-events">
+		<h2 class="latest-events__title">Senaste event</h2>
+		<div class="latest-events__container">
+			<?php
+        // Query for the latest_events custom post type
+        $latest_events_query = new WP_Query(array(
+            'post_type' => 'latest_events', // Custom post type key
+            'posts_per_page' => 3, // Number of posts to display
+        ));
+
+        // Loop through the posts
+        if ($latest_events_query->have_posts()) :
+            while ($latest_events_query->have_posts()) : $latest_events_query->the_post();
+                // Get ACF fields
+                $description = get_field('description'); // ACF field: description
+                $image = get_field('image'); // ACF field: image
+        ?>
+			<div class="latest-events__item">
+				<?php if ($image) : ?>
+				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="latest-events__image">
+				<?php endif; ?>
+				<div class="latest-events__content">
+					<h3 class="latest-events__item-title"><?php the_title(); ?></h3>
+					<p class="latest-events__description"><?php echo esc_html($description); ?></p>
+				</div>
+			</div>
+			<?php
+            endwhile;
+            wp_reset_postdata(); // Reset the query
+        else :
+            echo '<p>Inga event hittades.</p>'; // Fallback if no posts are found
+        endif;
+        ?>
+		</div>
+	</section>
+
+	<!-- Upcoming Events -->
+	<!-- Will be added -->
+	
 	<!-- Want To Know More Section -->
-	<div class="want-to-know-more">
+	<section class="want-to-know-more">
 		<div class="want-to-know-more__box">
 			<hr class="line">
 			<h2 class="want-to-know-more__box-title">Vill du veta mer?</h2>
@@ -59,7 +99,7 @@ get_header();
 				<a href="/foretag" class="want-to-know-more__box-btn">Företag</a>
 			</div>
 		</div>
-	</div>
+	</section>
 </main>
 
 <?php get_footer(); ?>
