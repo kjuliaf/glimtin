@@ -5,8 +5,12 @@ main {
 	padding: 2.5em 1.25em;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 	flex-direction: column;
+}
+
+.h1 {
+	font-size: 32px;
 }
 
 .page-heading {
@@ -18,3 +22,55 @@ main {
 	bottom: 0;
 	width: 100%;
 }
+
+/* För titeltexten, placera den överst */
+.title_text {
+	position: relative;
+	color: var(--primary-text-color);
+}
+    
+
+.event_cards {
+	position: relative;
+	top: 50px;
+	left: 20px;
+	display: flex;
+	gap: 20px; /* För att ge mellanrum mellan korten */
+	flex-wrap: wrap; /* Gör att korten kan bryta raden vid behov */
+}
+    
+/* Stil för varje eventkort */
+.event_card {
+	background-color: #ffffff;
+	width: 228px; /* Bredd på varje kort */
+	height: 344px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nytt kort inuti det vita kortet */
+.overlay_event_card {
+    position: relative;
+    background-color: #EBDDF8;
+	width: 209px;
+	height: 223px;
+	left: 10px;
+	top: 10px;
+}
+
+.event_card_title {
+	position: relative;
+	top: 15px;
+	left: 10px;
+}
+    
+/* Responsiv design: justera kortens bredd vid mindre skärmstorlekar */
+@media (max-width: 768px) {
+.event_cards {
+	gap: 10px;
+}
+
+.event_card {
+	width: 100%;
+}
+}
+
