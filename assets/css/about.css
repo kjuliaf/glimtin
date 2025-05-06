@@ -2,7 +2,7 @@
 
 /* Remove this below when you start working ... */
 main {
-	padding: 2.5em 1.25em;
+	padding: 2.5em 120px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,8 +13,37 @@ main {
 	font-size: 2em;
 }
 
+.ceo-info {
+	display: inline-flex;
+}
+
+.ceo-info-image{
+	object-fit: cover;
+  	width: 215px;
+  	height: 215px;
+	border-radius: 50%;
+}
+
+.ceo-info-text{
+	margin-left: 110px;
+}
+
+
 .footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+}
+
+h1{
+	font-size: 32px;
+	margin-bottom: 12px;
+}
+
+h2{
+	font-size: 16px;
+}
+
+h3{
+	font-size: 14px;
 }
