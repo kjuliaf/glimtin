@@ -1,39 +1,21 @@
 /* Event Page Styles */
 
-/* Remove this below when you start working ... */
-main {
-	padding: 2.5em 1.25em;
-	display: flex;
-	justify-content: center;
-	/* align-items: center; */
-	flex-direction: column;
-}
-
-.h1 {
+.intro_title {
+	margin: 40px 50px 10px 50px; /* top, right, bottom, left */
+	position: relative; /* valfritt – ta bort om ej behövs */
+	color: var(--primary-text-color);
 	font-size: 32px;
 }
 
-.page-heading {
-	font-size: 2em;
-}
-
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-/* För titeltexten, placera den överst */
-.title_text {
-	position: relative;
+.intro_text {
+	margin: 0px 50px 50px 50px; /* top, right, bottom, left */
 	color: var(--primary-text-color);
 }
-    
 
+    
 .event_cards {
 	position: relative;
-	top: 50px;
-	left: 20px;
+	left: 40px;
 	display: flex;
 	gap: 20px; /* För att ge mellanrum mellan korten */
 	flex-wrap: wrap; /* Gör att korten kan bryta raden vid behov */
@@ -41,16 +23,20 @@ main {
     
 /* Stil för varje eventkort */
 .event_card {
-	background-color: #ffffff;
+	background-color: var(--background-color);
 	width: 228px; /* Bredd på varje kort */
 	height: 344px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden; /* hide the pop-in until it's revealed */
+  	/* transition: transform 0.3s ease; */
+	transition: transform 0.4s ease, opacity 0.4s ease; /* Lägg till opacity-transition */	
+	cursor: pointer;
 }
 
 /* Nytt kort inuti det vita kortet */
 .overlay_event_card {
     position: relative;
-    background-color: #EBDDF8;
+    background-color: var(--primary-color);
 	width: 209px;
 	height: 223px;
 	left: 10px;
@@ -58,9 +44,18 @@ main {
 }
 
 .event_card_title {
+	font-family: var(--headings-font-family);
 	position: relative;
 	top: 15px;
 	left: 10px;
+}
+
+.event_card_text {
+	font-size: 11px;
+	position: relative;
+	padding: 10px;
+	top: 10px;
+	/*left: 10px; */
 }
     
 /* Responsiv design: justera kortens bredd vid mindre skärmstorlekar */
@@ -74,3 +69,84 @@ main {
 }
 }
 
+.circle_date_event_card{
+	position: relative;
+	top: 5px;
+	left: 5px;
+	width: 41px;
+	height: 41px;
+	background-color: var(--secondary-text-color);
+	border-radius: 50%;  
+}
+
+.month_date_event_card{
+	color: var(--accent-text-color);
+	position: relative;
+	top: 5px;
+	left: 10px;
+	font-size: 11px;
+}
+.number_date_event_card{
+	color: var(--accent-text-color);
+	position: relative;
+	left: 10px;
+	font-size: 24px;
+}
+
+
+/* The hidden card initially below the visible area */
+.hidden_card {
+	position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    width: 228px;
+    height: 344px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(0); /* Starta på samma plats som originalkortet */
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 1;
+}	
+
+/* Klass för aktivt kort när det klickas */
+.event_card.active .hidden_card {
+	transform: translateX(100%); /* Flytta kortet till höger om originalkortet */
+	opacity: 1; /* Gör den synlig */
+	visibility: visible; /* Gör den synlig */
+	z-index: 2; /* Se till att det ligger framför originalkortet */
+}
+
+.end{
+	position: relative;
+	margin: 100px;
+}
+
+.end_title {
+	color: var(--primary-text-color);
+	font-size: 32px;
+	text-align: center;
+	margin: 30px 0px 0px 0px;
+}
+
+.end_text {
+	color: var(--primary-text-color);
+	text-align: center;
+	margin: 20px 60px 0px 60px;
+}
+
+
+.end_button{
+	background-color: var(--primary-color);
+	width: 162px;
+	height: 40px;
+	border-radius: 30px;
+	margin: 20px auto;
+}
+
+.end_button_text{
+	color: var(--primary-text-color);
+	text-align: center;
+}

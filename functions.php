@@ -49,6 +49,9 @@ add_action('wp_enqueue_scripts', 'glimtin_enqueue_page_styles');
 /* JavaScript */
 function glimtin_enqueue_scripts() {
 	wp_enqueue_script('glimtin-script', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true);
+
+	//JavaScript för event-sida
+	wp_enqueue_script('event-script', get_template_directory_uri() . '/js/event.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'glimtin_enqueue_scripts');	
 
