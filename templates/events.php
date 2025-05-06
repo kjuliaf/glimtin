@@ -1,5 +1,7 @@
-
-<?php get_header(); ?>
+<?php 
+/* Template Name: Event */
+get_header(); 
+?>
 
 <main>
     <!-- Titelsektion -->

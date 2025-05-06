@@ -144,9 +144,25 @@
 	height: 40px;
 	border-radius: 30px;
 	margin: 20px auto;
+	display: flex;
+	justify-content: center; /* centrerar horisontellt */
+	align-items: center;     /* centrerar vertikalt */
+}
+
+.end_button:hover {
+	background-color: var(--primary-text-color); /* mörkare nyans om du har en sådan */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+
+	.end_button_text{
+		color: var(--accent-text-color);
+		text-align: center;
+	}
 }
 
 .end_button_text{
 	color: var(--primary-text-color);
 	text-align: center;
 }
+
+
