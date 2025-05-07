@@ -1,3 +1,5 @@
+
+
 <?php 
 /* Template Name: Event */
 get_header(); 
@@ -12,41 +14,53 @@ get_header();
     
     <!-- Eventsektion med flexbox för kort -->
     <section class="event_cards">
-        <!-- Här kan du skapa dynamiska eventkort med en loop -->
-        <div class="event_card">
-			<div class="overlay_event_card">
-				<div class="circle_date_event_card">
-					<p class="month_date_event_card"><?php the_field('event_date_month_1'); ?></p>
-					<p class="number_date_event_card"><?php the_field('event_date_number_1'); ?></p>
-				</div>
+
+	<?php
+		// Query för alla event-poster
+		$event_query = new WP_Query(array(
+			'post_type' => 'event',
+			// 'posts_per_page' => 10, // Hämta alla event
+		));
+
+		if ($event_query->have_posts()) :
+			while ($event_query->have_posts()) : $event_query->the_post(); 
+	?>
+
+	<div class="event_card">
+		<div class="overlay_event_card" style="background-color:<?php the_field('overlay_event_card_color'); ?>;">
+			<div class="circle_date_event_card">
+				<p class="month_date_event_card"><?php the_field('event_card_date_month'); ?></p>
+				<p class="number_date_event_card"><?php the_field('event_card_date_number'); ?></p>
 			</div>
-			<p class="event_card_title"><?php the_field('event_title_1'); ?></p>
-			<p class="event_card_text"><?php the_field('event_text_1'); ?></p>
-			
+		</div>
+		<p class="event_card_title"><?php the_field('event_card_title'); ?></p>
+		<p class="event_card_text"><?php the_field('event_card_text'); ?></p>
+	
 			<div class="hidden_card">
-				<div class="overlay_hidden_card">
-					<p class="hidden_card_title"><?php the_field('event_title_1'); ?></p>
-					<p class="hidden_card_text"><?php the_field('hidden_card_text'); ?></p>
+				<div class="overlay_hidden_card_title" style="background-color:<?php the_field('overlay_event_card_color'); ?>;">
+					<p class="hidden_card_title"><?php the_field('event_card_title'); ?></p>
 				</div>
-				<p class="hidden_card_embossed_title"><?php the_field('event_title_1'); ?></p>
-				
+				<div class="overlay_hidden_card" style="background-color:<?php the_field('overlay_event_card_color'); ?>;">
+					<p class="hidden_card_text"><strong>Plats: </strong><?php the_field('hidden_card_text_place'); ?></p>
+					<p class="hidden_card_text"><strong>Datum: </strong><?php the_field('hidden_card_text_date'); ?></p>
+					<p class="hidden_card_text"><strong>Tid: </strong><?php the_field('hidden_card_text_time'); ?></p>
+					<p class="hidden_card_text"><strong>Deltagare: </strong><?php the_field('hidden_card_text_users'); ?></p>
+					<p class="hidden_card_text"><strong>Övrig info: </strong><?php the_field('hidden_card_text_extra_info'); ?></p>
+				</div>
+				<p class="hidden_card_egraved_company"><?php the_field('hidden_card_company'); ?></p>
 			</div>
 		</div>
+	</div>
 
-		<div class="event_card">
-			<div class="overlay_event_card">
-				<div class="circle_date_event_card">
-					<p class="month_date_event_card"><?php the_field('event_date_month_2'); ?></p>
-					<p class="number_date_event_card"><?php the_field('event_date_number_2'); ?></p>
-				</div>
-			</div>
-			<p class="event_card_title"><?php the_field('event_title_2'); ?></p>
-			<p class="event_card_text"><?php the_field('event_text_2'); ?></p>
-		</div>
+	<?php
+		endwhile;
+			wp_reset_postdata();
+		else :
+			echo '<p>Inga event hittades.</p>';
+		endif;
+	?>
 
-        <!-- Exempel på kort, du kan använda en loop för att hämta dynamiskt innehåll här -->
     </section>
-
 
 	<section class="end">
 		<h1 class="end_title"><?php the_field('end_title'); ?></h1>
@@ -59,3 +73,6 @@ get_header();
 </main>
 
 <?php get_footer(); ?>
+
+
+
