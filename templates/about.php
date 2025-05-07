@@ -9,7 +9,7 @@ Template Name: Om oss
 <main>
 	<!-- Replace this below when you start working ... -->
 	<h1 class="page-heading"><?php the_field('test'); ?></h1>
-	<div class="ceo-info">
+	<section class="ceo-info-section">
 		<div>
 			<img src="<?php the_field('profile'); ?>" alt="Bild på ägaren johanna" class="ceo-info-image"/>
 		</div>
@@ -23,8 +23,29 @@ Template Name: Om oss
 				<p><?php the_field('ceoInfoContact'); ?></p>
 			</div>
 		</div>
-	</div>
-	<div></div>
-</main>
+	</section>
 
-<?php get_footer(); ?>
+	<section class="why-glimtin-section">
+		<div class="why-glimtin-text">
+			<div><h1><?php the_field('whyGlimtinTitle'); ?></h1></div>
+			<div>
+				<p><?php the_field('whyGlimtinText'); ?></p>
+			</div>
+		</div>
+		<div>
+			<img src="<?php the_field('image'); ?>" alt="Kort statistik" class="why-glimtin-image"/>
+		</div>
+
+	</section>
+
+	<section class="timeline-section">
+		Timeline
+	</section>
+
+	<section class="critical-section">
+		
+	</section>
+	
+	<div></div>
+
+</main>
