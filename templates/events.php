@@ -66,7 +66,7 @@ get_header();
 		<h1 class="end_title"><?php the_field('end_title'); ?></h1>
 		<p class="end_text"><?php the_field('end_text'); ?></p>
 		<div class="end_button">
-			<p class="end_button_text"><?php the_field('end_button_text'); ?></p>
+			<a href="<?php the_field('event_sign_up_link'); ?>" class="end_button_text" target="_blank" rel="noopener noreferrer"><?php the_field('end_button_text'); ?></p>
 		</div>
 	</section>
 
