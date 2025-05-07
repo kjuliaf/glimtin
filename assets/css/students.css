@@ -2,19 +2,252 @@
 
 /* Remove this below when you start working ... */
 main {
-	padding: 2.5em 1.25em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
+h2 {
+	font-size: 1.25em;
+}
+
+p {
+	font-size: 0.75em;
+}
+
+/* GlimtIn for students */
+.glimti-for-students {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 5rem;
+  }
+  
+  .glimti-for-students h1,
+  .glimti-for-students p {
+	text-align: center;
+	margin: 0.75rem;
+	margin-left: 15em;
+	margin-right: 15em;
+  }  
+
+  .faq-students {
+    background-color: transparent;
+    color: --primary-text-color;
+    border: 3px solid --primary-text-color;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+	margin-top: 1em;
+  }
+  
+  .faq-students:hover {
+	background-color: rgba(59, 8, 112, 0.1);
+  }
+
+/* Student Inspo Picture */
+.student-inspo-pic {
+	position: relative;
+	width: 100%;
+	height: 25rem;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+  }
+  
+  .student-inspo-pic::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay-color);
+	opacity: 0.8;
+	z-index: 1;
+  }
+  
+  .student_slogan {
+	position: relative;
+	z-index: 2;
+	color: white;
+	font-family: 'Dancing Script', cursive;
+	font-size: 4rem;
+	font-weight: 400;
+	margin: 0;
+	text-align: center;
+	transform: rotate(-5deg);
+	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+
+/* Engineer Inspo Section */
+.engineer-inspo {
+	text-align: center;
+	max-width: 1100px;
+	margin: 0 auto;
+	margin-top: 5em;
+  }
+  
+  .engineer-info {
+	display: flex;
+	flex-direction: row-reverse; /* Byter plats på bild och text */
+	text-align: left;
+	margin: 0 auto 40px auto;
+	align-items: flex-start;
+	gap: 40px;
+	max-width: 900px;
+}
+
+  .engineer-inspo hr {
+	border: none;
+	border-top: 1px solid black;
+	width: 100%;
+	margin: 20px 0 40px;
+  }
+  
+  .engineer-info .content {
+	flex: 2;
+}
+
+.engineer-info .image-container {
+	flex: 1;
+	position: relative;
+}	
+  
+  .engineer-info img {
+	width: 100%;
+	height: auto;
+  }
+  
+  .engineer-info h3 {
+	font-size: 22px;
+	margin-bottom: 5px;
+  }
+  
+  .engineer-info .job-title {
+	margin-bottom: 15px;
+	display: block;
+  }
+  
+  .engineer-info p {
+	margin-bottom: 15px;
+  }
+  
+  /* Vill du se mer section */
+  .see-more {
+	margin-top: 40px;
+	text-align: center;
+  }
+  
+  .see-more h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .see-more p {
+	margin-bottom: 20px;
+  }
+  
+  .engineer-archive {
+	background-color: #4b1f71;
+	color: white;
+	border: none;
+	padding: 12px 25px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+  }
+  
+  .engineer-archive:hover {
+	background-color: #3a1855;
+  }
+  
+/* ----------------------------------------------------------------------------------- */
+/* FAQ Section Styling */
+.faq-section {
+    position: relative;
+    padding: 40px 0 100px 0;
+    margin-bottom: 40px;
+    width: 100%;
+    overflow: visible;
+    z-index: 1;
+}
+
+/* Bakgrundsformen med exakt samma format som i exemplet */
+.faq-background-shape {
+    --p: 70px; /* kontrollerar formen (kan vara i procent) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; /* Vi använder hela sektionshöjden istället för fixa 180px */
+    background-color: #D3C3E1; /* Färgen som efterfrågades istället för #C44D58 */
+    z-index: -1;
+    clip-path: polygon(0 0, 100% var(--p), 100% 100%, 0 100%);
+}
+
+/* Innehållsbehållare för att placera texten till vänster */
+.faq-section .faq-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.faq-title {
+    color: #4b2e83; /* Mörklila färg för titeln */
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 10%; /* Flytta titeln till vänster, men inte helt ut i kanten */
+}
+
+.faq-section hr {
+    width: 130px;
+    border: none;
+    height: 2px;
+    background-color: #4b2e83; /* Mörklila understrykning */
+    margin: 0 0 25px 10%; /* Justera marginalen för att matcha titeln */
+}
+
+.faq-question {
+    color: #4b2e83; /* Mörklila färg för frågorna */
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 10%; /* Flytta frågorna till vänster för att matcha titeln */
+}
+
+.faq-answer {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 10%; /* Flytta svaren till vänster för att matcha frågorna */
+    max-width: 80%; /* Begränsa textbredden så den inte blir för bred */
+}
+/* ----------------------------------------------------------------------------------- */
+/* General styling */
 .page-heading {
 	font-size: 2em;
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+
 }
