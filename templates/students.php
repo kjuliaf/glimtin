@@ -7,13 +7,11 @@ Template Name: Elever
 <?php get_header(); ?>
 
 <main>
-	<!-- Replace this below when you start working ... -->
-
 <!-- GlimtIn for students -->
 <section class="glimti-for-students">
 	<h2><?php the_field('hero_title'); ?></h2>
 	<p><?php the_field('hero_text'); ?></p>
-	<button class="faq-students">Vanliga frågor</Button> <!-- Länka till längre ner på sidan sen-->
+    <a href="#faq-section" class="faq-students button">Vanliga frågor</a> <!-- Ändrat från knapp till länk med knapp-styling -->
 </section>
 
 <!-- Student Image and Slogan -->
@@ -21,44 +19,74 @@ Template Name: Elever
 		<p class="student_slogan"><?php the_field('elev_slogan'); ?></p>
 </section>
 
-<!-- Filesystem -->
-<div class="file-system">    
-    <!-- Högstadiet Information -->
-    <h3><?php the_field('titel_hogstadiet'); ?></h3>
-    <section class="hogstadiet-information">
-    	<h3 class="hogstadiet-questions"><?php the_field('hogstadiet_fraga_1'); ?></h3>
-    	<p class="hogstadiet-answers"><?php the_field('hogstadiet_svar_1'); ?></p>
+<!-- Högstadiet / Gymnasiet - File system -->
+<div class="tabset">
+  <!-- Tab 1 - Högstadiet -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="hogstadiet" checked>
+  <label for="tab1">Högstadiet</label>
 
-    	<h3 class="hogstadiet-questions"><?php the_field('hogstadiet_fraga_2'); ?></h3>
-    	<p class="hogstadiet-answers"><?php the_field('hogstadiet_svar_2'); ?></p>
-
-    	<h3 class="hogstadiet-questions"><?php the_field('hogstadiet_fraga_3'); ?></h3>
-    	<p class="hogstadiet-answers"><?php the_field('hogstadiet_svar_3'); ?></p>
-
-    	<h3 class="hogstadiet-questions"><?php the_field('hogstadiet_fraga_4'); ?></h3>
-    	<p class="hogstadiet-answers"><?php the_field('hogstadiet_svar_4'); ?></p>
-
-      <img src="<?php the_field('hogstadiet_dekoration'); ?>" alt="Kretskort. Dekoration.">
+  <!-- Tab 2 - Gymnasiet -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="gymnasiet">
+  <label for="tab2">Gymnasiet</label>
+  
+  <div class="tab-panels">
+    <!-- Högstadiet contebt -->
+    <section id="hogstadiet" class="tab-panel">
+      <div class="tab-content">
+        <!-- Left column -->
+        <div class="column left">
+		<h3 class="question"><?php the_field('hogstadiet_fraga_1'); ?></p>
+		<p class="answer"><?php the_field('hogstadiet_svar_1'); ?></p>
+          
+		<h3 class="question"><?php the_field('hogstadiet_fraga_2'); ?></p>
+		<p class="answer"><?php the_field('hogstadiet_svar_2'); ?></p>
+        </div>
+        
+        <!-- Middle column - picture -->
+        <div class="column middle">
+          <img class="decoration-img" src="<?php the_field('hogstadiet_dekoration'); ?>" alt="Kretskort. Dekoration.">
+        </div>
+        
+        <!-- Right column -->
+        <div class="column right">
+		  <h3 class="question"><?php the_field('hogstadiet_fraga_3'); ?></p>
+          <p class="answer"><?php the_field('hogstadiet_svar_3'); ?></p>
+          
+		  <h3 class="question"><?php the_field('hogstadiet_fraga_4'); ?></p>
+          <p class="answer"><?php the_field('hogstadiet_svar_4'); ?></p>
+        </div>
+      </div>
     </section>
-
-    <!-- Gymnasiet Information -->
-    <h3><?php the_field('titel_gymnasiet'); ?></h3>
-    <section class="gymnasiet-information">      
-      <h3 class="gymnasiet-questions"><?php the_field('gymnasiet_fraga_1'); ?></h3>
-      <p class="gymnasiet-answers"><?php the_field('gymnasiet_svar_1'); ?></p>
-
-      <h3 class="gymnasiet-questions"><?php the_field('gymnasiet_fraga_2'); ?></h3>
-      <p class="gymnasiet-answers"><?php the_field('gymnasiet_svar_2'); ?></p>
-
-      <h3 class="gymnasiet-questions"><?php the_field('gymnasiet_fraga_3'); ?></h3>
-      <p class="gymnasiet-answers"><?php the_field('gymnasiet_svar_3'); ?></p>
-
-      <h3 class="gymnasiet-questions"><?php the_field('gymnasiet_fraga_4'); ?></h3>
-      <p class="gymnasiet-answers"><?php the_field('gymnasiet_svar_4'); ?></p>
-
-      <img src="<?php the_field('gymnasiet_dekoration'); ?>" alt="Kretskort. Dekoration.">
+    
+    <!-- Gymnasiet content -->
+    <section id="gymnasiet" class="tab-panel">
+      <div class="tab-content">
+        <!-- Left column -->
+        <div class="column left">
+			<h3 class="question"><?php the_field('gymnasiet_fraga_1'); ?></p>
+			<p class="answer"><?php the_field('gymnasiet_svar_1'); ?></p>
+          
+			<h3 class="question"><?php the_field('gymnasiet_fraga_2'); ?></p>
+          <p class="answer"><?php the_field('gymnasiet_svar_2'); ?></p>
+        </div>
+        
+        <!-- Mittenkolumn med diagram/bild -->
+        <div class="column middle">
+          <img class="decoration-img" src="<?php the_field('gymnasiet_dekoration'); ?>" alt="Kretskort. Dekoration.">
+        </div>
+        
+        <!-- Höger kolumn -->
+        <div class="column right">
+			<h3 class="question"><?php the_field('gymnasiet_fraga_3'); ?></p>
+			<p class="answer"><?php the_field('gymnasiet_svar_3'); ?></p>
+			
+			<h3 class="question"><?php the_field('gymnasiet_fraga_4'); ?></p>
+			<p class="answer"><?php the_field('gymnasiet_svar_4'); ?></p>
+        </div>
+      </div>
     </section>
- </div>
+  </div>
+</div>
 
 <!-- Engineer Inspo Section -->
 <section class="engineer-inspo">
@@ -100,7 +128,7 @@ Template Name: Elever
 </section>
 
 <!-- FAQ Section -->
-<section class="faq-section">
+<section id="faq-section" class="faq-section">
     <div class="faq-background-shape"></div>
     <div class="faq-content">
         <h2 class="faq-title">Vanliga frågor</h2>
@@ -115,6 +143,7 @@ Template Name: Elever
         <p class="faq-question"><?php the_field('fraga_3'); ?></p>
         <p class="faq-answer"><?php the_field('svar_3'); ?></p>
     </div>
+	<div class="slanted-shape-bottom"></div>
 </section>
 
 </main>

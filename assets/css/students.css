@@ -36,8 +36,8 @@ p {
 
   .faq-students {
     background-color: transparent;
-    color: --primary-text-color;
-    border: 3px solid --primary-text-color;
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-text-color);
     border-radius: 50px;
     padding: 10px 30px;
     font-size: 15px;
@@ -92,6 +92,123 @@ p {
 	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   }
 
+  /* Högstadiet / Gymnasiet - File system */
+*,*:before,*:after {
+	box-sizing: border-box;
+  }
+  
+  /* Tabset styling */
+  .tabset {
+	max-width: 100%;
+	margin-top: 3em;
+	position: relative;
+  }
+  
+  .tabset > input[type="radio"] {
+	position: absolute;
+	left: -200vw;
+  }
+  
+  .tabset .tab-panel {
+	display: none;
+  }
+  
+  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2) {
+	display: block;
+  }
+  
+  .tabset > label {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px 25px;
+	border: 1px solid transparent;
+	border-bottom: 0;
+	cursor: pointer;
+	font-weight: 600;
+	background-color: #d4bceb;
+	border-radius: 15px 15px 0 0;
+  }
+  
+  .tabset > label:first-of-type {
+	margin-left: 30px;
+  }
+  
+  input:focus-visible + label {
+	outline: 2px solid rgba(0,102,204,1);
+	border-radius: 15px 15px 0 0;
+  }
+  
+  .tabset > label:hover,
+  .tabset > input:focus + label {
+	color: #7b55a7;
+  }
+  
+  .tabset > input:checked + label {
+	color: #7b55a7;
+	background-color: #e6d7f0;
+	border-color: #b694da;
+	border-bottom: 1px solid #e6d7f0;
+	margin-bottom: -1px;
+  }
+  
+  .tab-panel {
+	padding: 30px;
+	border-top: 1px solid #b694da;
+	background-color: #e6d7f0;
+  }
+  
+  .tab-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	min-height: 400px;
+  }
+  
+  .column {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	text-align: left;
+  }
+  
+  .column.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+  
+  .column.left,
+  .column.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .question {
+	color: var(--primary-text-color);
+	margin-bottom: 10px;
+	width: 100%;
+  }
+  
+  .answer {
+	color: var(--primary-text-color);
+	margin-bottom: 30px;
+	width: 100%;
+	margin-top: 1em;
+  }
+  
+  .decoration-img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
 /* Engineer Inspo Section */
 .engineer-inspo {
 	text-align: center;
@@ -102,7 +219,7 @@ p {
   
   .engineer-info {
 	display: flex;
-	flex-direction: row-reverse; /* Byter plats på bild och text */
+	flex-direction: row-reverse;
 	text-align: left;
 	margin: 0 auto 40px auto;
 	align-items: flex-start;
@@ -145,10 +262,10 @@ p {
 	margin-bottom: 15px;
   }
   
-  /* Vill du se mer section */
   .see-more {
 	margin-top: 40px;
 	text-align: center;
+	margin-bottom: 3em;
   }
   
   .see-more h3 {
@@ -174,80 +291,231 @@ p {
   .engineer-archive:hover {
 	background-color: #3a1855;
   }
-  
-/* ----------------------------------------------------------------------------------- */
-/* FAQ Section Styling */
-.faq-section {
+
+  /* FAQ Section */
+  .faq-section {
     position: relative;
-    padding: 40px 0 100px 0;
-    margin-bottom: 40px;
+    padding: 40px 0 0 0;
+    margin-bottom: 0;
     width: 100%;
-    overflow: visible;
     z-index: 1;
+    overflow: visible;
 }
 
-/* Bakgrundsformen med exakt samma format som i exemplet */
 .faq-background-shape {
-    --p: 70px; /* kontrollerar formen (kan vara i procent) */
+    --p: 70px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%; /* Vi använder hela sektionshöjden istället för fixa 180px */
-    background-color: #D3C3E1; /* Färgen som efterfrågades istället för #C44D58 */
+    height: 100%;
+    background-color: var(--secondary-color);
     z-index: -1;
     clip-path: polygon(0 0, 100% var(--p), 100% 100%, 0 100%);
 }
 
-/* Innehållsbehållare för att placera texten till vänster */
 .faq-section .faq-content {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px;
+	margin-top: 2em;
 }
 
 .faq-title {
-    color: #4b2e83; /* Mörklila färg för titeln */
+    color: var(--primary-text-color);
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 5px;
     text-align: left;
-    padding-left: 10%; /* Flytta titeln till vänster, men inte helt ut i kanten */
+    padding-left: 10%;
 }
 
 .faq-section hr {
     width: 130px;
     border: none;
     height: 2px;
-    background-color: #4b2e83; /* Mörklila understrykning */
-    margin: 0 0 25px 10%; /* Justera marginalen för att matcha titeln */
+    background-color: var(--primary-text-color);
+    margin: 0 0 25px 10%;
+    text-align: left;
 }
 
 .faq-question {
-    color: #4b2e83; /* Mörklila färg för frågorna */
-    font-size: 16px;
+    color: var(--primary-text-color);
+    font-size: 14px;
     font-weight: 700;
     margin-top: 25px;
     margin-bottom: 10px;
-    padding-left: 10%; /* Flytta frågorna till vänster för att matcha titeln */
+    padding-left: 10%;
+    text-align: left;
 }
 
 .faq-answer {
-    color: #333;
-    font-size: 14px;
+    color: var(--primary-text-color);
+    font-size: 12px;
     line-height: 1.6;
     margin-bottom: 20px;
-    padding-left: 10%; /* Flytta svaren till vänster för att matcha frågorna */
-    max-width: 80%; /* Begränsa textbredden så den inte blir för bred */
+    padding-left: 10%;
+    max-width: 80%;
+    text-align: left;
 }
-/* ----------------------------------------------------------------------------------- */
+
+.slanted-shape-bottom {
+    --p: 100px;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: -2px;
+    clip-path: polygon(0 var(--p), 100% 0, 100% 100%, 0 100%);
+    z-index: 0;
+}
+
 /* General styling */
 .page-heading {
 	font-size: 2em;
 }
 
 .footer {
-
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    z-index: 1;
 }
+
+/* Mediastyling */
+/* Mobil styling för eleverna-sidan */
+@media (max-width: 768px) {
+	/* Allmänna stilar */
+	h2 {
+	  font-size: 1.5em;
+	  margin-bottom: 0.5em;
+	}
+	
+	p {
+	  font-size: 0.9em;
+	}
+	
+	/* GlimtIn for students */
+	.glimti-for-students {
+	  margin: 2rem 1rem;
+	}
+	
+	.glimti-for-students h1,
+	.glimti-for-students p {
+	  margin-left: 1em;
+	  margin-right: 1em;
+	}
+	
+	/* Student Inspo Picture */
+	.student-inspo-pic {
+	  height: 15rem;
+	}
+	
+	.student_slogan {
+	  font-size: 2.2rem;
+	}
+	
+	
+	.see-more h3 {
+	  font-size: 20px;
+	}
+
+	.tab-content {
+		flex-direction: column;
+		align-items: stretch;
+	  }
+	
+	  .column {
+		width: 100%;
+		padding: 10px 0;
+	  }
+	
+	  .column.middle {
+		display: none;
+	  }
+	
+	  .column.left,
+	  .column.right {
+		align-items: flex-start;
+	  }
+	
+	/* FAQ Section */
+	.faq-background-shape {
+	  --p: 40px;
+	}
+	
+	.faq-title {
+	  padding-left: 5%;
+	  font-size: 20px;
+	}
+	
+	.faq-section hr {
+	  margin: 0 0 20px 5%;
+	}
+	
+	.faq-question {
+	  padding-left: 5%;
+	  font-size: 13px;
+	}
+	
+	.faq-answer {
+	  padding-left: 5%;
+	  max-width: 90%;
+	  font-size: 0.9em;
+	}
+	
+	.slanted-shape-bottom {
+	  --p: 60px;
+	  height: 100px;
+	}
+
+	.engineer-info {
+		flex-direction: column;
+		align-items: stretch;
+		text-align: left;
+	  }
+	
+	  .engineer-info .image-container {
+		order: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1.5em;
+	  }
+	
+	  .engineer-info .image-container img {
+		max-width: 80%;
+		height: auto;
+	  }
+	
+	  .engineer-info a {
+		margin-top: 0.5em;
+		font-size: 0.9em;
+	  }
+	
+	  .engineer-info .content {
+		order: 1;
+		width: 100%;
+		padding: 0 1.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start; /* Vänsterjustera innehållet */
+	  }
+	
+	  .engineer-info h3 {
+		font-size: 1.3em;
+		text-align: left;
+	  }
+	
+	  .engineer-info .job-title {
+		font-size: 1em;
+		margin-bottom: 1em;
+	  }
+	
+	  .engineer-info p {
+		font-size: 0.95em;
+		max-width: 100%;
+	  }
+  }
