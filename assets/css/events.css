@@ -111,12 +111,51 @@
     z-index: 1;
 }	
 
+/* Nytt kort inuti det vita kortet */
+.overlay_hidden_card {
+	margin: 10px 10px 0px 10px; /* top, right, bottom, left */
+    background-color: var(--primary-color);
+	width: 209px;
+	height: 287px;
+}
+
+.hidden_card_title{
+	position: relative;
+	top: 5px;
+	left: 10px;
+	font-family: var(--headings-font-family);
+	color: var(--primary-text-color);
+	font-size: 20px;
+}
+
+.hidden_card_text{
+	position: relative;
+	top: 20px;
+	left: 10px;
+	color: var(--primary-text-color);
+	font-weight: 500;
+}
+
+.hidden_card_embossed_title{
+	position: absolute;
+	left: 100px;
+	bottom: 12px;
+	right: 10px;
+	font-family: var(--headings-font-family);
+	color: var(--primary-text-color);
+}
+
 /* Klass för aktivt kort när det klickas */
 .event_card.active .hidden_card {
 	transform: translateX(100%); /* Flytta kortet till höger om originalkortet */
 	opacity: 1; /* Gör den synlig */
 	visibility: visible; /* Gör den synlig */
 	z-index: 2; /* Se till att det ligger framför originalkortet */
+}
+
+.event_card.tilted .hidden_card {
+	transform: rotate(8deg) translateX(150px);
+	z-index: 2;
 }
 
 .end{

@@ -24,7 +24,12 @@ get_header();
 			<p class="event_card_text"><?php the_field('event_text_1'); ?></p>
 			
 			<div class="hidden_card">
-				<p><?php the_field('event_date_number_1'); ?></p>
+				<div class="overlay_hidden_card">
+					<p class="hidden_card_title"><?php the_field('event_title_1'); ?></p>
+					<p class="hidden_card_text"><?php the_field('hidden_card_text'); ?></p>
+				</div>
+				<p class="hidden_card_embossed_title"><?php the_field('event_title_1'); ?></p>
+				
 			</div>
 		</div>
 
