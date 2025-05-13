@@ -2,7 +2,7 @@
 
 /* Remove this below when you start working ... */
 main {
-	padding: 2.5em 120px;
+	padding: 4em 120px; /* 2.5em innan */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -42,8 +42,8 @@ section {
 }
 .why-glimtin-image{
 	object-fit: cover;
-  	width: 315px;
-  	height: 315px;
+  	width: 350px;
+  	height: 350px;
 	border-radius: 50%;
 	/* margin-top: 50px; */
 }
@@ -56,6 +56,29 @@ section {
 }
 
 /* Critical section */
+.critical-section{
+	display: inline-flex;
+	align-items: center;
+}
+
+.critical-image{
+	object-fit: cover;
+  	width: 350px;
+  	height: 350px;
+	border-radius: 50%;
+	/* margin-top: 50px; */
+}
+
+.critical-link{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin-top: 10px;
+}
+
+.critical-text{
+	margin-left: 180px;
+}
 
 .footer {
 	position: absolute;
@@ -75,3 +98,4 @@ h2{
 h3{
 	font-size: 14px;
 }
+
