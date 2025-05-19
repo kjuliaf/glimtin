@@ -37,9 +37,43 @@ Template Name: Om oss
 
 	</section>
 
-	<section class="timeline-section">
-		Timeline
-	</section>
+	<div class="timeline" id="timeline">
+		<?php
+		// Hämta timeline events sorterade på datum (antag att event_date är i format YYYY-MM-DD)
+		$args = array(
+			'post_type' => 'timeline_event',
+			'posts_per_page' => -1,
+			'meta_key' => 'event_date',
+			'orderby' => 'meta_value',
+			'order' => 'ASC',
+		);
+
+		$query = new WP_Query($args);
+
+		if($query->have_posts()) :
+			while($query->have_posts()) : $query->the_post();
+				$date = get_field('event_date');
+				$title = get_the_title();
+				$content = get_the_content();
+		?>
+			<div class="timeline-item">
+				<div class="timeline-date"><?php echo esc_html($date); ?></div>
+				<div class="timeline-marker"></div> <!-- pricken -->
+				<div class="timeline-title"><?php echo esc_html($title); ?></div>
+
+				<!-- Popup som är dold som standard -->
+				<div class="timeline-popup">
+					<?php echo wp_kses_post(wpautop($content)); ?>
+				</div>
+			</div>  
+		<?php
+			endwhile;
+			wp_reset_postdata();
+		else:
+			echo '<p>Inga händelser hittades.</p>';
+		endif;
+		?>
+	</div>
 
 	<section class="critical-section">
 		<div>
@@ -62,5 +96,24 @@ Template Name: Om oss
 	</section>
 	
 	<div></div>
+
+	<script>
+		document.querySelectorAll('.timeline-item').forEach(item => {
+		item.addEventListener('click', () => {
+			const isActive = item.classList.contains('active');
+
+			// Stäng alla öppna popup:ar
+			document.querySelectorAll('.timeline-item.active').forEach(activeItem => {
+			activeItem.classList.remove('active');
+			});
+
+			// Öppna popup på den klickade om den inte var öppen
+			if (!isActive) {
+			item.classList.add('active');
+			}
+		});
+		});
+
+	</script>
 
 </main>

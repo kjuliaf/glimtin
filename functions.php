@@ -113,3 +113,33 @@ add_action('admin_init', function () {
     }
     remove_menu_page('edit-comments.php');
 });
+
+// Timeline about
+function register_timeline_event_cpt() {
+    $labels = array(
+        'name'               => 'Timeline Events',
+        'singular_name'      => 'Timeline Event',
+        'menu_name'          => 'Timeline',
+        'add_new'            => 'Lägg till ny',
+        'add_new_item'       => 'Lägg till ny händelse',
+        'edit_item'          => 'Redigera händelse',
+        'new_item'           => 'Ny händelse',
+        'view_item'          => 'Visa händelse',
+        'search_items'       => 'Sök händelser',
+        'not_found'          => 'Inga händelser hittades',
+        'not_found_in_trash' => 'Inga händelser hittades i papperskorgen',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => false,
+        'menu_icon'          => 'dashicons-calendar-alt',
+        'supports'           => array('title', 'editor', 'custom-fields'),
+        'show_in_rest'       => true, // gör CPT tillgänglig i Gutenberg om du vill
+    );
+
+    register_post_type('timeline_event', $args);
+}
+add_action('init', 'register_timeline_event_cpt');
+

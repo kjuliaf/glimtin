@@ -48,12 +48,85 @@ section {
 	/* margin-top: 50px; */
 }
 
-/* Timeline section */
-.timeline-section{
-	height: 200px;
-	width: 100%;
-	background-color: var(--accent-color);
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px 20px;
+  width: auto;
+  margin: 60px auto;
+  overflow-x: auto;
+  height: 300px;
 }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px; /* placera linjen på denna höjd */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #370B5A;
+  z-index: 1; /* linjen bakom allt */
+}
+
+.timeline-item {
+  position: relative;
+  flex: 0 0 150px;
+  text-align: center;
+  z-index: 2;
+}
+
+.timeline-date {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #370B5A;
+  position: relative;
+  z-index: 3; /* ovanför linjen */
+}
+
+.timeline-marker {
+  width: 18px;
+  height: 18px;
+  background: #370B5A;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: 0 auto;
+  position: relative;
+  top: -54px; /* flytta pricken uppåt så den hamnar mitt på linjen */
+  z-index: 3;
+}
+
+
+.timeline-title {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #370B5A;
+  position: relative;
+  top: -38px;
+  z-index: 3;
+}
+
+.timeline-popup {
+  position: absolute;
+  top: 70px; /* justera efter behov så den hamnar under titeln */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: #f0e9fb;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  color: #370B5A;
+  font-size: 14px;
+  display: none; /* dold som standard */
+  z-index: 10;
+}
+
+.timeline-item.active .timeline-popup {
+  display: block;
+}
+
 
 /* Critical section */
 .critical-section{
