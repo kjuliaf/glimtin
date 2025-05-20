@@ -73,6 +73,7 @@ section {
 .timeline-item {
   position: relative;
   flex: 0 0 150px;
+  margin: 0 20px;
   text-align: center;
   z-index: 2;
 }
@@ -82,6 +83,7 @@ section {
   font-weight: bold;
   color: #370B5A;
   position: relative;
+  top: -50px;
   z-index: 3; /* ovanför linjen */
 }
 
@@ -103,29 +105,35 @@ section {
   font-weight: 600;
   color: #370B5A;
   position: relative;
-  top: -38px;
+  top: -56px;
   z-index: 3;
 }
 
 .timeline-popup {
   position: absolute;
-  top: 70px; /* justera efter behov så den hamnar under titeln */
+  top: 70px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 220px;
+  transform: translateX(-50%) translateY(-20px); /* popup startar 20px högre */
+  width: 200px;
   background: #f0e9fb;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   color: #370B5A;
   font-size: 14px;
-  display: none; /* dold som standard */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 10;
 }
 
 .timeline-item.active .timeline-popup {
-  display: block;
+  display: block; /* du kan ha kvar denna, men nedan räcker egentligen */
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* popup glider till sin plats */
+  pointer-events: auto;
 }
+
 
 
 /* Critical section */
