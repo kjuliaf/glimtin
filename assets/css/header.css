@@ -7,16 +7,19 @@
 .header {
 	background-color: var(--primary-color);
 	color: var(--primary-text-color);
-	padding: 0.75em 1.5rem;
+	padding: 0 1.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 @media (max-width: 768px) {
     .header {
-        padding: 0.75em 1rem;
+        padding: 0 1rem;
     }
 }
 
