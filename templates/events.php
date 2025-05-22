@@ -56,19 +56,19 @@ get_header();
 		endwhile;
 			wp_reset_postdata();
 		else :
-			echo '<p>Inga event hittades.</p>';
+			echo '<p class="info_about_event_site_styling">' . get_field('info_about_event_site') . '</p>';
 		endif;
 	?>
 
     </section>
 
-	<section class="end">
+	<!-- <section class="end">
 		<h1 class="end_title"><?php the_field('end_title'); ?></h1>
 		<p class="end_text"><?php the_field('end_text'); ?></p>
 		<div class="end_button">
 			<a href="<?php the_field('event_sign_up_link'); ?>" class="end_button_text" target="_blank" rel="noopener noreferrer"><?php the_field('end_button_text'); ?></p>
 		</div>
-	</section>
+	</section> -->
 
 </main>
 

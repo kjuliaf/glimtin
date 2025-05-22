@@ -238,3 +238,8 @@
 }
 
 
+.info_about_event_site_styling{
+	font-size: var(--headings-font-size);
+	font-family: var(--body-font-family);
+}
+
