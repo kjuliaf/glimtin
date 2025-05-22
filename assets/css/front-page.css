@@ -1,8 +1,9 @@
 /* Front Page Styles */
 :root {
-	--hero-heading-size: 4.75em;
+	--hero-heading-size: 4.5em;
 	--hero-subheading-size: 1.75em;
 	--overlay-color: rgba(51, 8, 126, 0.4);
+	--headings-font-size: 2em;
 
 }
 
@@ -10,6 +11,7 @@
     :root {
         --hero-heading-size: 4em;
         --hero-subheading-size: 1.5em;
+		--headings-font-size: 1.75em;
     }
 }
 
@@ -17,6 +19,7 @@
     :root {
         --hero-heading-size: 3em;
         --hero-subheading-size: 1.25em;
+		--headings-font-size: 1.5em;
     }
 }
 
@@ -86,44 +89,9 @@
 	}
 
 	.hero__subheading {
+		max-width: 350px;
 		padding-left: 1.325rem;
 	}
-}
-
-/* Partners Section */
-.partners {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 1em;
-	margin: 3em 0;
-	margin-top: 4em;
-}
-
-.partners__title {
-	width: 300px;
-}
-
-.partners__title-text {
-	font-size: var(--headings-font-size);
-	text-align: center;
-	margin-bottom: 0.5em;
-}
-
-.partners__logos {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 2em;
-	margin-left: 2em;
-	gap: clamp(0em, 6vw, 12em);
-}
-
-.partners__logos-img {
-	width: clamp(50px, 20%, 150px);
-	height: 100%;
 }
 
 /* Who Are We Section */
@@ -196,6 +164,42 @@
     .who-are-we__img-right {
 		z-index: -1;
 	}
+}
+
+/* Partners Section */
+.partners {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin: 3em 0;
+	margin-top: 4em;
+}
+
+.partners__title {
+	width: 300px;
+}
+
+.partners__title-text {
+	font-size: var(--headings-font-size);
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+.partners__logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2em;
+	margin-left: 2em;
+	gap: clamp(0em, 6vw, 12em);
+}
+
+.partners__logos-img {
+	width: clamp(50px, 20%, 150px);
+	height: 100%;
 }
 
 /* Latest events section */
