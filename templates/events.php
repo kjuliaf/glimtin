@@ -37,6 +37,7 @@ get_header();
 		<p class="event_card_text"><?php the_field('event_card_text'); ?></p>
 	
 			<div class="hidden_card">
+				<div class="close_button">×</div>
 				<div class="overlay_hidden_card_title" style="background-color:<?php the_field('overlay_event_card_color'); ?>;">
 					<p class="hidden_card_title"><?php the_field('event_card_title'); ?></p>
 				</div>
