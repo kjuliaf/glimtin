@@ -2,19 +2,615 @@
 
 /* Remove this below when you start working ... */
 main {
-	padding: 2.5em 1.25em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
+h2 {
+	font-size: 1.25em;
+}
+
+p {
+	font-size: 0.75em;
+}
+
+/* Student Inspo Picture */
+.student-inspo-pic {
+	position: relative;
+	width: 100%;
+	height: 25rem;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+  }
+  
+  .student-inspo-pic::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay-color);
+	opacity: 0.8;
+	z-index: 1;
+  }
+  
+  .student_slogan {
+	z-index: 2;
+	color: white;
+	font-size: 64px;
+	font-weight: 400;
+	margin: 0;
+	text-align: center;
+  }
+
+  .student_slogan-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
+  }
+
+/* GlimtIn for students */
+.glimti-for-students {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 2rem;
+	margin: 5rem;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+  }
+  
+  .glimti-for-students h2 {
+	flex: 1;
+	text-align: left;
+	margin: 0;
+	font-size: 32px;
+  }
+
+  .glimti-for-students .content-right {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+  }
+
+  .glimti-for-students .content-left {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	order: -1;
+  }
+  
+  .glimti-for-students p {
+	text-align: left;
+	margin: 0 0 1.5rem 0;
+	font-size: 1em;
+  } 
+
+  /* Högstadiet / Gymnasiet - File system */
+*,*:before,*:after {
+	box-sizing: border-box;
+  }
+  
+  /* Tabset styling */
+  .tabset {
+	max-width: 100%;
+	margin-top: 3em;
+	position: relative;
+  }
+  
+  .tabset > input[type="radio"] {
+	position: absolute;
+	left: -200vw;
+  }
+  
+  .tabset .tab-panel {
+	display: none;
+  }
+  
+  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2) {
+	display: block;
+  }
+  
+  .tabset > label {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px 25px;
+	border: 1px solid transparent;
+	border-bottom: 0;
+	cursor: pointer;
+	font-weight: 600;
+	background-color: #d4bceb;
+	border-radius: 15px 15px 0 0;
+  }
+  
+  .tabset > label:first-of-type {
+	margin-left: 30px;
+  }
+  
+  input:focus-visible + label {
+	outline: 2px solid rgba(0,102,204,1);
+	border-radius: 15px 15px 0 0;
+  }
+  
+  .tabset > label:hover,
+  .tabset > input:focus + label {
+	color: #7b55a7;
+  }
+  
+  .tabset > input:checked + label {
+	color: #7b55a7;
+	background-color: #e6d7f0;
+	border-color: #b694da;
+	border-bottom: 1px solid #e6d7f0;
+	margin-bottom: -1px;
+  }
+  
+  .tab-panel {
+	/*padding: 30px;*/
+	border-top: 1px solid #b694da;
+	background-color: #e6d7f0;
+  }
+  
+  .tab-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	min-height: 400px;
+  }
+  
+  .column {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+  }
+  
+  .column.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+  
+  .column.left,
+  .column.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+  }
+  
+  .question-group {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+  }
+  
+  .question-header {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+  }
+  
+  .question-header img {
+    width: 30px;    /* Ändra detta värde */
+    height: 30px;   /* Ändra detta värde */
+    object-fit: contain;
+    flex-shrink: 0;
+}
+  
+  .question-header .question {
+	margin: 0;
+	flex: 1;
+  }
+  
+  .question-group .answer {
+	margin: 0;
+	width: 100%;
+	margin-bottom: 10px;
+  }
+
+  .column.left {
+	padding-left: 2em;
+  }
+
+  .column.right {
+	padding-right: 2em;
+  }
+  
+  .question {
+	color: var(--primary-text-color);
+	margin-bottom: 10px;
+	width: 100%;
+  }
+  
+  .answer {
+	color: var(--primary-text-color);
+	margin-bottom: 30px;
+	width: 100%;
+	margin-top: 1em;
+  }
+  
+  .decoration-img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+/* Engineer Inspo Section */
+.engineer-inspo {
+	text-align: center;
+	max-width: 1100px;
+	margin: 0 auto;
+	margin-top: 5em;
+  }
+  
+  .engineer-info {
+	display: flex;
+	flex-direction: row-reverse;
+	text-align: left;
+	margin: 0 auto 40px auto;
+	align-items: flex-start;
+	gap: 40px;
+	max-width: 900px;
+}
+
+  .engineer-inspo hr {
+	border: none;
+	border-top: 1px solid black;
+	width: 100%;
+	margin: 20px 0 40px;
+  }
+  
+  .engineer-info .content {
+	flex: 2;
+}
+
+.engineer-info .image-container {
+	flex: 1;
+	position: relative;
+}	
+  
+  .engineer-info img {
+	width: 100%;
+	height: auto;
+  }
+  
+  .engineer-info h3 {
+	font-size: 22px;
+	margin-bottom: 5px;
+  }
+  
+  .engineer-info .job-title {
+	margin-bottom: 15px;
+	display: block;
+  }
+  
+  .engineer-info p {
+	margin-bottom: 15px;
+  }
+  
+  .see-more {
+	margin-top: 40px;
+	text-align: center;
+	margin-bottom: 3em;
+  }
+  
+  .see-more h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .see-more p {
+	margin-bottom: 20px;
+  }
+  
+  .engineer-archive {
+	background-color: #4b1f71;
+	color: white;
+	border: none;
+	padding: 12px 25px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+  }
+  
+  .engineer-archive:hover {
+	background-color: #3a1855;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    position: relative;
+    padding: 40px 0 0 0;
+    margin-bottom: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: visible;
+}
+
+.faq-background-shape {
+    --p: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% var(--p), 100% 100%, 0 100%);
+}
+
+.faq-section .faq-content {
+    max-width: 1200px;
+	margin-top: 2em;
+}
+
+.faq-title {
+    color: var(--primary-text-color);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.faq-section hr {
+    width: 130px;
+    border: none;
+    height: 2px;
+    background-color: var(--primary-text-color);
+    margin: 0 0 25px 10%;
+    text-align: left;
+}
+
+.faq-question {
+    color: var(--primary-text-color);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 10%;
+    text-align: left;
+}
+
+.faq-answer {
+    color: var(--primary-text-color);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 10%;
+    max-width: 80%;
+    text-align: left;
+}
+
+.slanted-shape-bottom {
+    --p: 100px;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: -2px;
+    clip-path: polygon(0 var(--p), 100% 0, 100% 100%, 0 100%);
+    z-index: 0;
+}
+
+/* General styling */
 .page-heading {
 	font-size: 2em;
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    z-index: 1;
 }
+
+/* Mediastyling */
+/* Mobil styling för eleverna-sidan */
+@media (max-width: 768px) {
+	/* Allmänna stilar */
+	h2 {
+	  font-size: 1.5em;
+	  margin-bottom: 0.5em;
+	}
+	
+	p {
+	  font-size: 0.9em;
+	}
+	
+	/* GlimtIn for students */
+	.glimti-for-students {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	
+	.glimti-for-students h1,
+	.glimti-for-students p {
+	  margin-left: 1em;
+	  margin-right: 1em;
+	  padding: 0 1em;
+	}
+
+	.glimti-for-students h2 {
+		order: 1;
+		padding: 0 1em;
+	}
+
+	.glimti-for-students .content-left,
+.glimti-for-students .content-right {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
+	order: 2;
+	padding: 0 1em;
+}
+
+.glimti-for-students .content-left p,
+.glimti-for-students .content-right p {
+	order: 1;
+	margin: 0;
+}
+
+.glimti-for-students .content-left a,
+.glimti-for-students .content-right a {
+	order: 2;
+	align-self: flex-start;
+	font-size: 0.9em;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0 1em;
+}
+	
+	/* Student Inspo Picture */
+	.student-inspo-pic {
+	  height: 15rem;
+	}
+	
+	.student_slogan {
+	  font-size: 2.2rem;
+	}
+	
+	
+	.see-more h3 {
+	  font-size: 20px;
+	}
+
+	.tab-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Centrerar innehåll horisontellt */
+		padding: 0 1em; /* Jämn padding vänster och höger */
+		box-sizing: border-box;
+	}
+	
+	  .column {
+		width: 100%;
+		padding: 10px 0;
+	  }
+	
+	  .column.middle {
+		display: none;
+	  }
+	
+	  .column.left,
+	  .column.right {
+		  width: 100%;
+		  padding: 0;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center; /* Centrerar varje question-group horisontellt */
+	  }
+
+	  .question-group {
+		width: 100%;
+		max-width: 500px; /* Justera efter behov */
+		padding: 0 1em;
+		box-sizing: border-box;
+		margin-bottom: 1.5em;
+	}
+	
+	/* FAQ Section */
+	.faq-background-shape {
+	  --p: 40px;
+	}
+	
+	.faq-title {
+	  padding-left: 5%;
+	  font-size: 20px;
+	}
+	
+	.faq-section hr {
+	  margin: 0 0 20px 5%;
+	}
+	
+	.faq-question {
+	  padding-left: 5%;
+	  font-size: 13px;
+	}
+	
+	.faq-answer {
+	  padding-left: 5%;
+	  max-width: 90%;
+	  font-size: 0.9em;
+	}
+	
+	.slanted-shape-bottom {
+	  --p: 60px;
+	  height: 100px;
+	}
+
+	.engineer-info {
+		flex-direction: column;
+		align-items: stretch;
+		text-align: left;
+	  }
+	
+	  .engineer-info .image-container {
+		order: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1.5em;
+	  }
+	
+	  .engineer-info .image-container img {
+		max-width: 80%;
+		height: auto;
+	  }
+	
+	  .engineer-info a {
+		margin-top: 0.5em;
+		font-size: 0.9em;
+	  }
+	
+	  .engineer-info .content {
+		order: 1;
+		width: 100%;
+		padding: 0 1.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start; /* Vänsterjustera innehållet */
+	  }
+	
+	  .engineer-info h3 {
+		font-size: 1.3em;
+		text-align: left;
+	  }
+	
+	  .engineer-info .job-title {
+		font-size: 1em;
+		margin-bottom: 1em;
+	  }
+	
+	  .engineer-info p {
+		font-size: 0.95em;
+		max-width: 100%;
+	  }
+  }
