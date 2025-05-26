@@ -8,7 +8,6 @@ Tags: modern, fancy, technology
 
 /* Global Styles */
 :root {
-	/* Change these when colors/fonts are decided ... */
 	--primary-color: #EBDDF8;
 	--primary-text-color: #370B5A;
 	--secondary-color: #D3C3E1;
@@ -17,7 +16,7 @@ Tags: modern, fancy, technology
 	--accent-text-color: #FFFFFF;
 	--overlay-color: rgba(76, 38, 115, 0.7);
 	--background-color: #FFFCFC;
-	--headings-font-family: 'Slabo 13px', sans-serif;
+	--headings-font-family: 'Albert Sans', sans-serif;
 	--body-font-family: 'Work Sans', sans-serif;
 	--headings-font-size: 1.5em;
 	--p-font-size: 1em;
@@ -37,6 +36,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--headings-font-family);
+	font-weight: 500;
+	color: var(--primary-text-color);
 }
 
 p {
