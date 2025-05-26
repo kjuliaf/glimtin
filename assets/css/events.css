@@ -1,20 +1,475 @@
 /* Event Page Styles */
 
-/* Remove this below when you start working ... */
-main {
-	padding: 2.5em 1.25em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.intro_title {
+    margin: 40px 50px 10px 50px;
+    position: relative;
+    font-size: 32px;
 }
 
-.page-heading {
-	font-size: 2em;
+.intro_text {
+    margin: 0px 50px 50px 50px;
 }
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+.event_cards {
+    position: relative;
+    left: 40px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Stil för varje eventkort */
+.event_card {
+    position: relative;
+    width: 278px;
+    height: 414px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+/* Nytt kort inuti det vita kortet */
+.overlay_event_card {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 258px;
+    height: 263px;
+    left: 10px;
+    top: 10px;
+}
+
+.event_card_title {
+    font-family: var(--headings-font-family);
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+
+.event_card_text {
+    position: relative;
+    padding: 10px;
+    top: 10px;
+    font-size: 0.75em;
+}
+
+.circle_date_event_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 51px;
+    height: 51px;
+    background-color: var(--secondary-text-color);
+    border-radius: 50%;
+}
+
+.month_date_event_card {
+    color: var(--accent-text-color);
+    text-align: center;
+    font-size: 12px;
+}
+
+.number_date_event_card {
+    color: var(--accent-text-color);
+    position: relative;
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* The hidden card initially below the visible area */
+.hidden_card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    width: 278px;
+    height: 414px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(0);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.7s ease, opacity 0.4s ease;
+    z-index: 1;
+    border: 1px solid #ccc;
+}
+
+/* Close button för hidden_card */
+.close_button {
+    position: absolute;
+    top: 5px;      /* Lite mindre upp än tidigare, alltså neråt */
+    right: 5px;    /* Mer åt vänster från kanten */
+    width: 28px;
+    height: 28px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+}
+
+
+.event_card.active .close_button {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Anpassa knappens hover-effekt */
+.close_button:hover {
+    background-color: #333;
+}
+
+/* Overlay titlar och innehåll */
+.overlay_hidden_card_title {
+    margin: 10px 10px 0px 10px;
+    width: 258px;
+    height: 50px;
+}
+
+/* Nytt kort inuti det vita kortet */
+.overlay_hidden_card {
+    margin: 10px 10px 0px 10px;
+    width: 258px;
+    height: 294px;
+}
+
+.hidden_card_title {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.hidden_card_text {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.hidden_card_text strong {
+    font-weight: 600;
+}
+
+.hidden_card_egraved_company {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    left: auto;
+    text-align: right;
+    direction: rtl;
+    white-space: nowrap;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #e5e5e5;
+    color: transparent;
+    text-shadow: rgba(245, 245, 245, 0.67) 0px 1px 1px;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.event_card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Lägg tillbaka till ursprungsposition med animation (standardläge) */
+.event_card .hidden_card {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.7s ease, opacity 0.4s ease;
+}
+
+/* Klass för aktivt kort när det klickas - desktop */
+@media (min-width: 769px) {
+    .event_card.active .hidden_card {
+        transform: translateX(100%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 2;
+    }
+}
+
+/* Tilted card effect */
+.event_card.tilted .hidden_card {
+    transform: rotate(10deg) translateX(150px);
+    z-index: 2;
+    box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.end {
+    position: relative;
+    margin: 150px;
+}
+
+.end_title {
+    font-size: 32px;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.end_text {
+    text-align: center;
+    margin: 20px 60px 0 60px;
+}
+
+.end_button {
+    background-color: var(--primary-color);
+    width: 162px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end_button:hover {
+    background-color: var(--primary-text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.end_button:hover .end_button_text {
+    color: var(--accent-text-color);
+    text-align: center;
+}
+
+.end_button_text {
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.info_about_event_site_styling {
+    font-size: var(--headings-font-size);
+    font-family: var(--body-font-family);
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Mellanstor skärm: staplade event-kort vertikalt, hidden_card poppar fram utan glide */
+@media (max-width: 768px) {
+    .event_cards {
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .event_card {
+        width: 210px;
+        height: 310px;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    /* hidden_card gömt under event_card som standard */
+    .event_card .hidden_card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 210px;
+        height: 310px;
+        transform: none !important;  /* Inga transform på mobile */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+        z-index: 1;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* När aktiv: bara visa ovanpå utan glide */
+    .event_card.active .hidden_card {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 10;
+        transform: none !important;
+    }
+
+    .overlay_event_card {
+        width: 190px;
+        height: 195px;
+        left: 10px;
+        top: 10px;
+        position: relative;
+    }
+
+    .overlay_hidden_card_title {
+        width: 190px;
+        height: 40px;
+        margin: 8px 8px 0 8px;
+    }
+
+    .overlay_hidden_card {
+        width: 190px;
+        height: 210px;
+        margin: 8px;
+    }
+
+    .event_card_title {
+        font-family: var(--headings-font-family);
+        position: relative;
+        top: 15px;
+        left: 10px;
+    }
+    
+    .event_card_text {
+        position: relative;
+        padding: 10px;
+        top: 10px;
+        font-size: 0.6em;
+    }
+	/* Close button för hidden_card */
+	.close_button {
+		position: absolute;
+		top: 3px;      /* Lite mindre upp än tidigare, alltså neråt */
+		right: 3px;    /* Mer åt vänster från kanten */
+		width: 28px;
+		height: 28px;
+		background-color: rgb(0, 0, 0);
+		color: white;
+		border-radius: 50%;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease;
+		z-index: 20;
+	}
+}
+
+/* Mobilvy: ännu mindre, samma princip */
+@media (max-width: 480px) {
+    .event_cards {
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 160px;
+        margin: 0 auto;
+    }
+
+    .event_card {
+        width: 140px;
+        height: 210px;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    /* hidden_card gömt under event_card som standard */
+    .event_card .hidden_card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 140px;
+        height: 210px;
+        transform: none !important;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+        z-index: 1;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* När aktiv: visa ovanpå utan glide */
+    .event_card.active .hidden_card {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 10;
+        transform: none !important;
+    }
+
+    .overlay_event_card {
+        width: 130px;
+        height: 133px;
+        left: 10px;
+        top: 10px;
+        position: relative;
+    }
+
+    .overlay_hidden_card_title {
+        width: 130px;
+        height: 30px;
+        margin: 6px 6px 0 6px;
+    }
+
+    .overlay_hidden_card {
+        width: 130px;
+        height: 150px;
+        margin: 6px;
+    }
+
+    .event_card_title {
+        font-family: var(--headings-font-family);
+        position: relative;
+        top: 15px;
+        left: 10px;
+    }
+    
+    .event_card_text {
+        position: relative;
+        padding: 10px;
+        top: 10px;
+        font-size: 0.75em;
+    }
+
+	/* Close button för hidden_card */
+	.close_button {
+		position: absolute;
+		top: 10px;      /* Lite mindre upp än tidigare, alltså neråt */
+		right: 10px;    /* Mer åt vänster från kanten */
+		width: 28px;
+		height: 28px;
+		background-color: black;
+		color: white;
+		border-radius: 50%;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease;
+		z-index: 20;
+	}
 }
