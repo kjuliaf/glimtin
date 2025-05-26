@@ -2,19 +2,316 @@
 
 /* Remove this below when you start working ... */
 main {
-	padding: 2.5em 1.25em;
+	padding: 4em 120px; /* 2.5em innan */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
+section {
+	margin-bottom: 85px;
+}
+
 .page-heading {
 	font-size: 2em;
 }
 
+/* CEO section */
+.ceo-info-section {
+	display: inline-flex;
+	margin-bottom: 85px;
+}
+.ceo-info-image{
+	object-fit: cover;
+  width: 250px;
+  height: 250px;
+	border-radius: 50%;
+}
+.ceo-info-text{
+	margin-left: 110px;
+}
+
+/* Why glimtin section */
+.why-glimtin-section{
+	display: inline-flex;
+  	align-items: center;
+}
+.why-glimtin-text{
+	margin-right: 210px;
+}
+.why-glimtin-image{
+	object-fit: cover;
+  width: 350px;
+  height: 350px;
+	border-radius: 50%;
+	/* margin-top: 50px; */
+}
+
+/* Timeline section */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px 20px 40px;
+  width: auto;
+  margin: 50px auto 0px;
+  height: 300px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px; /* placera linjen på denna höjd */
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background-color: #370B5A;
+  z-index: 1; /* linjen bakom allt */
+}
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  margin: 0 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.timeline-date {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #370B5A;
+  position: relative;
+  top: -50px;
+  z-index: 3; /* ovanför linjen */
+}
+
+.timeline-marker {
+  width: 18px;
+  height: 18px;
+  background: #370B5A;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: 0 auto;
+  position: relative;
+  top: -54px; /* flytta pricken uppåt så den hamnar mitt på linjen */
+  z-index: 3;
+}
+
+.timeline-marker:hover{
+  /* width: 22px;
+  height: 22px;
+  top: -56px; */
+  filter: drop-shadow(#360b5a70 0rem 0rem 8px);
+}
+
+.timeline-title {
+  font-weight: 400;
+  color: #370B5A;
+  position: relative;
+  top: -48px;
+  z-index: 3;
+}
+
+.timeline-popup {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px); /* popup startar 20px högre */
+  width: 200px;
+  background: #f0e9fb;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  color: #370B5A;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 10;
+}
+
+.timeline-item.active .timeline-popup {
+  display: block; /* du kan ha kvar denna, men nedan räcker egentligen */
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* popup glider till sin plats */
+  pointer-events: auto;
+}
+
+
 .footer {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: 100%;
+}
+
+h1{
+	font-size: 32px;
+	margin-bottom: 18px;
+}
+
+h2{
+	font-size: 16px;
+}
+
+h3{
+	font-size: 14px;
+}
+
+/* Media seciton */
+@media (max-width: 1200px){
+  main {
+    padding: 4em 70px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* CEO section */
+  .ceo-info-section {
+    display: inline-flex;
+    margin-bottom: 85px;
+  }
+  .ceo-info-image{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  .ceo-info-text{
+    margin-left: 70px;
+  }
+
+  /* Why glimtin section */
+  .why-glimtin-section{
+    display: inline-flex;
+    align-items: center;
+  }
+  .why-glimtin-text{
+    margin-right: 70px;
+  }
+  .why-glimtin-image{
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    /* margin-top: 50px; */
+  }
+}
+
+
+/* Phone */
+@media (max-width: 1025px){
+  main {
+    padding: 4em 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* ceo info section */
+  .ceo-info-section {
+    display:block;
+    margin-bottom: 85px;
+  }
+  .ceo-info-image-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .ceo-info-text{
+	  margin-left: 0;
+  }
+
+
+  /* Why glimtin section */
+  .why-glimtin-section{
+    display: block;
+    align-items: center;
+  }
+  .why-glimtin-text{
+    margin-right: 0;
+  }
+  .why-glimtin-image-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Timeline section */
+  /* Timeline section - mobil layout med linje till vänster */
+.timeline {
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 40px;
+  height: auto;
+  width: 100%;
+}
+
+.timeline::before {
+  top: 0;
+  left: 10px; /* flytta linjen till vänster */
+  width: 4px;
+  height: 100%;
+  transform: none;
+}
+
+.timeline-item {
+  position: relative;
+  transition: margin 1s ease, padding 1s ease;
+  flex: none;
+  width: 100%;
+  margin: 40px 0;
+  padding-left: 30px; /* skjut texten åt höger från linjen */
+  text-align: left;
+  left: -40px;
+}
+
+/* Justera punktens placering */
+.timeline-marker {
+  position: relative;
+  top: 0;
+  left: -30px;
+  margin: 0;
+}
+
+/* Återställ textpositioner */
+.timeline-date{
+  position: relative;
+  top: 20px;
+  margin: 0;
+}
+.timeline-title {
+  position: relative;
+  top: auto;
+  margin: 0;
+}
+
+/* Popupen visas som vanlig block under rubrik i mobil */
+.timeline-popup {
+  position: static;
+  transform: translateY(-10px); /* startposition för smidig slide */
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 10px;
+  margin-left: 0px;
+  max-width: 85%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* När popupen är aktiv */
+.timeline-item.active .timeline-popup {
+  opacity: 1;
+  transform: translateY(0); /* glider på plats */
+  max-height: 1000px; /* tillräckligt stort för att rymma allt */
+  pointer-events: auto;
+}
+
+
+
 }
