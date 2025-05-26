@@ -1,22 +1,34 @@
 /* Header Styles */
 .no-scroll {
     overflow: hidden;
-    height: 100vh;
 }
 
 .header {
 	background-color: var(--primary-color);
 	color: var(--primary-text-color);
-	padding: 0.75em 1.5rem;
+	padding: 0 1.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: height 0.2s cubic-bezier(0.4, 1, 0.2, 1);
+}
+
+/* Header shrinks on scroll */
+.header.scrolling {
+    height: 65px;
 }
 
 @media (max-width: 768px) {
     .header {
-        padding: 0.75em 1rem;
+        padding: 0 1rem;
+    }
+
+    .header.scrolling {
+        height: 60px;
     }
 }
 

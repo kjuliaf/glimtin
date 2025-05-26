@@ -47,7 +47,7 @@ p {
 
 /* Utility Classes */
 .line {
-	border-top: 1px solid var(--secondary-text-color);
+	border-top: 1px solid var(--primary-text-color);
 }
 
 .link {
