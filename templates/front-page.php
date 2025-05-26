@@ -95,7 +95,7 @@ get_header();
 			<hr class="line">
 			<h2 class="want-to-know-more__box-title">Vill du veta mer?</h2>
 			<div class="want-to-know-more__box-btns">
-				<a href="/elever" class="want-to-know-more__box-btn">Studenter</a>
+				<a href="/elever" class="want-to-know-more__box-btn">Elever</a>
 				<a href="/foretag" class="want-to-know-more__box-btn">Företag</a>
 			</div>
 		</div>
