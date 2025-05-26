@@ -7,16 +7,37 @@ Template Name: Elever
 <?php get_header(); ?>
 
 <main>
+<!-- Student Image and Slogan -->
+<section class="student-inspo-pic" style="background-image: url('<?php the_field('elev_bild'); ?>');">
+  <div class="student_slogan-wrapper">
+    <p class="student_slogan">En ingenjör är</p>
+	<p id="multipleStrings" class="student_slogan">
+  <span id="typedText"></span><span class="cursor">|</span>
+</p>  </div>
+</section>
+
 <!-- GlimtIn for students -->
 <section class="glimti-for-students">
 	<h2><?php the_field('hero_title'); ?></h2>
-	<p><?php the_field('hero_text'); ?></p>
-    <a href="#faq-section" class="faq-students button">Vanliga frågor</a> <!-- Ändrat från knapp till länk med knapp-styling -->
+	<div class="content-right">
+		<p><?php the_field('hero_text'); ?></p>
+		<a href="#faq-section" class="who-are-we__box-link">
+			<span class="link">Vanliga frågor</span>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="Pil" />
+		</a>
+	</div>
 </section>
 
-<!-- Student Image and Slogan -->
-<section class="student-inspo-pic" style="background-image: url('<?php the_field('elev_bild'); ?>');">
-		<p class="student_slogan"><?php the_field('elev_slogan'); ?></p>
+<!-- GlimtIn to your school -->
+<section class="glimti-for-students">
+	<h2><?php the_field('hero_title_2'); ?></h2>
+	<div class="content-left">
+		<p><?php the_field('hero_text_2'); ?></p>
+		<a href="#faq-section" class="who-are-we__box-link">
+			<span class="link">Kontakta oss</span>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="Pil" />
+		</a>
+	</div>
 </section>
 
 <!-- Högstadiet / Gymnasiet - File system -->
@@ -35,11 +56,21 @@ Template Name: Elever
       <div class="tab-content">
         <!-- Left column -->
         <div class="column left">
-		<h3 class="question"><?php the_field('hogstadiet_fraga_1'); ?></p>
-		<p class="answer"><?php the_field('hogstadiet_svar_1'); ?></p>
-          
-		<h3 class="question"><?php the_field('hogstadiet_fraga_2'); ?></p>
-		<p class="answer"><?php the_field('hogstadiet_svar_2'); ?></p>
+        <div class="question-group">
+          <div class="question-header">
+            <img src="<?php the_field('hogstadiet_ikon_1'); ?>" alt="Kretskort. Dekoration.">
+            <h3 class="question"><?php the_field('hogstadiet_fraga_1'); ?></h3>
+          </div>
+          <p class="answer"><?php the_field('hogstadiet_svar_1'); ?></p>
+        </div>
+			
+        <div class="question-group">
+          <div class="question-header">
+            <img src="<?php the_field('hogstadiet_ikon_2'); ?>" alt="Kretskort. Dekoration.">
+            <h3 class="question"><?php the_field('hogstadiet_fraga_2'); ?></h3>
+          </div>
+          <p class="answer"><?php the_field('hogstadiet_svar_2'); ?></p>
+        </div>
         </div>
         
         <!-- Middle column - picture -->
@@ -49,11 +80,21 @@ Template Name: Elever
         
         <!-- Right column -->
         <div class="column right">
-		  <h3 class="question"><?php the_field('hogstadiet_fraga_3'); ?></p>
+        <div class="question-group">
+          <div class="question-header">
+            <img src="<?php the_field('hogstadiet_ikon_3'); ?>" alt="Kretskort. Dekoration.">
+            <h3 class="question"><?php the_field('hogstadiet_fraga_3'); ?></h3>
+          </div>
           <p class="answer"><?php the_field('hogstadiet_svar_3'); ?></p>
+        </div>
           
-		  <h3 class="question"><?php the_field('hogstadiet_fraga_4'); ?></p>
+        <div class="question-group">
+          <div class="question-header">
+            <img src="<?php the_field('hogstadiet_ikon_4'); ?>" alt="Kretskort. Dekoration.">
+            <h3 class="question"><?php the_field('hogstadiet_fraga_4'); ?></h3>
+          </div>
           <p class="answer"><?php the_field('hogstadiet_svar_4'); ?></p>
+        </div>
         </div>
       </div>
     </section>
@@ -63,11 +104,21 @@ Template Name: Elever
       <div class="tab-content">
         <!-- Left column -->
         <div class="column left">
-			<h3 class="question"><?php the_field('gymnasiet_fraga_1'); ?></p>
+			<div class="question-group">
+			<div class="question-header">
+				<img src="<?php the_field('gymnasiet_ikon_1'); ?>" alt="Kretskort. Dekoration.">
+				<h3 class="question"><?php the_field('gymnasiet_fraga_1'); ?></h3>
+			</div>
 			<p class="answer"><?php the_field('gymnasiet_svar_1'); ?></p>
-          
-			<h3 class="question"><?php the_field('gymnasiet_fraga_2'); ?></p>
-          <p class="answer"><?php the_field('gymnasiet_svar_2'); ?></p>
+			</div>
+			
+			<div class="question-group">
+			<div class="question-header">
+				<img src="<?php the_field('gymnasiet_ikon_2'); ?>" alt="Kretskort. Dekoration.">
+				<h3 class="question"><?php the_field('gymnasiet_fraga_2'); ?></h3>
+			</div>
+			<p class="answer"><?php the_field('gymnasiet_svar_2'); ?></p>
+			</div>
         </div>
         
         <!-- Mittenkolumn med diagram/bild -->
@@ -77,11 +128,21 @@ Template Name: Elever
         
         <!-- Höger kolumn -->
         <div class="column right">
-			<h3 class="question"><?php the_field('gymnasiet_fraga_3'); ?></p>
+		<div class="question-group">
+			<div class="question-header">
+				<img src="<?php the_field('gymnasiet_ikon_3'); ?>" alt="Kretskort. Dekoration.">
+				<h3 class="question"><?php the_field('gymnasiet_fraga_3'); ?></h3>
+			</div>
 			<p class="answer"><?php the_field('gymnasiet_svar_3'); ?></p>
+			</div>
 			
-			<h3 class="question"><?php the_field('gymnasiet_fraga_4'); ?></p>
+			<div class="question-group">
+			<div class="question-header">
+				<img src="<?php the_field('gymnasiet_ikon_4'); ?>" alt="Kretskort. Dekoration.">
+				<h3 class="question"><?php the_field('gymnasiet_fraga_4'); ?></h3>
+			</div>
 			<p class="answer"><?php the_field('gymnasiet_svar_4'); ?></p>
+			</div>
         </div>
       </div>
     </section>
@@ -120,11 +181,11 @@ Template Name: Elever
   </section>
 
   <!-- Se mer Section -->
-  <div class="see-more">
+    <!--<div class="see-more">
     <h3>Vill du se mer?</h3>
     <p>Kolla vår sida med fler ingenjörer!</p>
     <button class="engineer-archive">Se mer →</button>
-  </div>
+  </div> -->
 </section>
 
 <!-- FAQ Section -->
