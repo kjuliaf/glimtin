@@ -9,7 +9,7 @@ Template Name: Om oss
 <main>
 	<!-- Replace this below when you start working ... -->
 	<section class="ceo-info-section">
-		<div>
+		<div class="ceo-info-image-container">
 			<img src="<?php the_field('profile'); ?>" alt="Bild på ägaren johanna" class="ceo-info-image"/>
 		</div>
 		<div class="ceo-info-text">
@@ -17,6 +17,7 @@ Template Name: Om oss
 			<div>
 				<p><?php the_field('ceoInfoText'); ?></p>
 			</div>
+			<br>
 			<div>
 				<h2>Kontakt</h2>
 				<p><?php the_field('ceoInfoContact'); ?></p>
@@ -31,13 +32,15 @@ Template Name: Om oss
 				<p><?php the_field('whyGlimtinText'); ?></p>
 			</div>
 		</div>
-		<div>
+		<div class="why-glimtin-image-container">
 			<img src="<?php the_field('image'); ?>" alt="Kort statistik" class="why-glimtin-image"/>
 		</div>
 
 	</section>
 
 	<div class="timeline" id="timeline">
+		  
+
 		<?php
 		// Hämta timeline events sorterade på datum (antag att event_date är i format YYYY-MM-DD)
 		$args = array(
@@ -57,12 +60,15 @@ Template Name: Om oss
 				$content = get_the_content();
 		?>
 			<div class="timeline-item">
-				<div class="timeline-date"><?php echo esc_html($date); ?></div>
+				<div></div>
+				<div class="timeline-date"><?php the_field('dateTitle'); ?></div>
 				<div class="timeline-marker"></div> <!-- pricken -->
 				<div class="timeline-title"><?php echo esc_html($title); ?></div>
 
 				<!-- Popup som är dold som standard -->
 				<div class="timeline-popup">
+					<?php echo esc_html($date); ?>
+					<br><br>
 					<?php echo wp_kses_post(wpautop($content)); ?>
 				</div>
 			</div>  
@@ -74,28 +80,9 @@ Template Name: Om oss
 		endif;
 		?>
 	</div>
-
-	<section class="critical-section">
-		<div>
-			<img src="<?php the_field('image2'); ?>" alt="Kort statistik" class="critical-image"/>
-		</div>
-		<div class="critical-text">
-			<div>
-				<h1><?php the_field('criticalTitle'); ?></h1>
-			</div>
-			<div>
-				<p><?php the_field('criticalText'); ?></p>
-			</div>
-			<div>
-				<a href="<?php the_field('criticalLink'); ?>" class="critical-link">
-					<span class="link">Läs mer</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="Pil" />
-				</a>
-			</div>
-		</div>
-	</section>
 	
 	<div></div>
+
 
 	<script>
 		document.querySelectorAll('.timeline-item').forEach(item => {
@@ -117,3 +104,5 @@ Template Name: Om oss
 	</script>
 
 </main>
+
+<?php get_footer(); ?>
