@@ -9,7 +9,7 @@ main {
 }
 
 h2 {
-	font-size: 1.25em;
+	font-size: 1.5em;
 }
 
 p {
@@ -524,12 +524,12 @@ p {
 		  padding: 0;
 		  display: flex;
 		  flex-direction: column;
-		  align-items: center; /* Centrerar varje question-group horisontellt */
+		  align-items: center;
 	  }
 
 	  .question-group {
 		width: 100%;
-		max-width: 500px; /* Justera efter behov */
+		max-width: 500px;
 		padding: 0 1em;
 		box-sizing: border-box;
 		margin-bottom: 1.5em;
@@ -596,7 +596,7 @@ p {
 		padding: 0 1.5em;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start; /* Vänsterjustera innehållet */
+		align-items: flex-start;
 	  }
 	
 	  .engineer-info h3 {
@@ -613,8 +613,8 @@ p {
 		font-size: 0.95em;
 		max-width: 100%;
 	  }
-  }
 
-  @media (min-width: 1300px) {
-	
+	  p {
+		font-size: 0.75em;
+	}
   }
