@@ -9,33 +9,31 @@ Template Name: Om oss
 <main>
 	<!-- Replace this below when you start working ... -->
 	<section class="ceo-info-section">
-		<div class="ceo-info-image-container">
-			<img src="<?php the_field('profile'); ?>" alt="Bild på ägaren johanna" class="ceo-info-image"/>
-		</div>
-		<div class="ceo-info-text">
-			<div><h1>Johanna Birgersdotter</h1></div>
-			<div>
-				<p><?php the_field('ceoInfoText'); ?></p>
+		<div class="ceo-image-and-contact">
+			<div class="ceo-info-image-container">
+				<img src="<?php the_field('profile'); ?>" alt="Bild på ägaren johanna" class="ceo-info-image"/>
 			</div>
 			<br>
-			<div>
+			<div class="ceo-info-contact">
 				<h2>Kontakt</h2>
 				<p><?php the_field('ceoInfoContact'); ?></p>
 			</div>
+		</div>
+
+		<div class="ceo-info-text">
+			<div><h1>Johanna Birgersdotter</h1></div>
+			<div><p><?php the_field('ceoInfoText'); ?></p></div>
 		</div>
 	</section>
 
 	<section class="why-glimtin-section">
 		<div class="why-glimtin-text">
 			<div><h1><?php the_field('whyGlimtinTitle'); ?></h1></div>
-			<div>
-				<p><?php the_field('whyGlimtinText'); ?></p>
-			</div>
+			<div><p><?php the_field('whyGlimtinText'); ?></p></div>
 		</div>
 		<div class="why-glimtin-image-container">
 			<img src="<?php the_field('image'); ?>" alt="Kort statistik" class="why-glimtin-image"/>
 		</div>
-
 	</section>
 
 	<div class="timeline" id="timeline">
