@@ -62,45 +62,101 @@ get_header();
 		</div>
 	</section>
 
-	<!-- Latest Events Section -->
-	<section class="latest-events">
-		<h2 class="latest-events__title">Senaste event</h2>
-		<div class="latest-events__container">
-			<?php
-        // Query for the latest_events custom post type
-        $latest_events_query = new WP_Query(array(
-            'post_type' => 'latest_events', // Custom post type key
-            'posts_per_page' => 3, // Number of posts to display
-        ));
+	<!-- Upcoming Events Section -->
+	<section class="events">
+		<h2 class="events__title">Kommande event</h2>
+		<div>
+			<div class="events__container">
+				<button class="events__arrow events__arrow--left" aria-label="Föregående event">&#8592;</button>
+				<div class="events__slider">
 
-        // Loop through the posts
-        if ($latest_events_query->have_posts()) :
-            while ($latest_events_query->have_posts()) : $latest_events_query->the_post();
-                // Get ACF fields
-                $description = get_field('description'); // ACF field: description
-                $image = get_field('image'); // ACF field: image
-        ?>
-			<div class="latest-events__item">
-				<?php if ($image) : ?>
-				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="latest-events__image">
-				<?php endif; ?>
-				<div class="latest-events__content">
-					<h3 class="latest-events__item-title"><?php the_title(); ?></h3>
-					<p class="latest-events__description"><?php echo esc_html($description); ?></p>
+					<?php
+						// Query for the upcoming_events custom post type
+						$upcoming_events_query = new WP_Query(array(
+							'post_type' => 'upcoming_events', // Custom post type key
+							'posts_per_page' => 3, // Number of posts to display
+						));
+				
+						// Loop through the posts
+						if ($upcoming_events_query->have_posts()) :
+							while ($upcoming_events_query->have_posts()) : $upcoming_events_query->the_post();
+								// Get ACF fields
+								$description = get_field('description'); // ACF field: description
+								$image = get_field('image'); // ACF field: image
+						?>
+					<div class="events__item events__item--upcoming">
+						<?php if ($image) : ?>
+						<div class="events__image--container">
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="events__image">
+							<div class="shape--upcoming"></div>
+						</div>
+						<?php endif; ?>
+						<div class="events__content">
+							<div class="events__item-title">
+								<h3><?php the_title(); ?></h3>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/glitter-icon.svg" alt="Glitter ikon">
+							</div>
+							<p class="events__description"><?php echo esc_html($description); ?></p>
+							<a href="/event" class="events__upcoming-more--btn">Se fler</a>
+						</div>
+					</div>
+					<?php
+							endwhile;
+							wp_reset_postdata(); // Reset the query
+						endif;
+						?>
 				</div>
+				<button class="events__arrow events__arrow--right" aria-label="Nästa event">&#8594;</button>
 			</div>
-			<?php
-            endwhile;
-            wp_reset_postdata(); // Reset the query
-        else :
-            echo '<p>Inga event hittades.</p>'; // Fallback if no posts are found
-        endif;
-        ?>
 		</div>
 	</section>
 
-	<!-- Upcoming Events -->
-	<!-- Will be added -->
+	<!-- Latest Events Section -->
+	<section class="events events--latest">
+		<h2 class="events__title">Senaste event</h2>
+		<div class="events__container">
+			<button class="events__arrow events__arrow--left" aria-label="Föregående event">&#8592;</button>
+			<div class="events__slider">
+				<?php
+				// Query for the latest_events custom post type
+				$latest_events_query = new WP_Query(array(
+					'post_type' => 'latest_events', // Custom post type key
+					'posts_per_page' => 3, // Number of posts to display
+				));
+		
+				// Loop through the posts
+				if ($latest_events_query->have_posts()) :
+					while ($latest_events_query->have_posts()) : $latest_events_query->the_post();
+						// Get ACF fields
+						$description = get_field('description'); // ACF field: description
+						$image = get_field('image'); // ACF field: image
+				?>
+				<div class="events__item">
+					<?php if ($image) : ?>
+					<div class="events__image--container">
+						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="events__image">
+						<div class="shape-left--latest"></div>
+						<div class="shape-right--latest"></div>
+
+					</div>
+					<?php endif; ?>
+					<div class="events__content">
+						<div class="events__item-title">
+							<h3><?php the_title(); ?></h3>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/glitter-icon.svg" alt="Glitter ikon">
+						</div>
+						<p class="events__description"><?php echo esc_html($description); ?></p>
+					</div>
+				</div>
+				<?php
+					endwhile;
+					wp_reset_postdata(); // Reset the query
+				endif;
+				?>
+			</div>
+			<button class="events__arrow events__arrow--right" aria-label="Nästa event">&#8594;</button>
+		</div>
+	</section>
 
 	<!-- Want To Know More Section -->
 	<section class="want-to-know-more">
@@ -108,8 +164,8 @@ get_header();
 			<hr class="line">
 			<h2 class="want-to-know-more__box-title">Vill du veta mer?</h2>
 			<div class="want-to-know-more__box-btns">
-				<a href="/elever" class="want-to-know-more__box-btn">Elever</a>
-				<a href="/foretag" class="want-to-know-more__box-btn">Företag</a>
+				<a href="/elever" class="want-to-know-more__box-btn">För elever</a>
+				<a href="/foretag" class="want-to-know-more__box-btn">För företag</a>
 			</div>
 		</div>
 	</section>

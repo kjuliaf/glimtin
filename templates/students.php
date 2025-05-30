@@ -28,18 +28,6 @@ Template Name: Elever
 	</div>
 </section>
 
-<!-- GlimtIn to your school -->
-<section class="glimti-for-students">
-	<h2><?php the_field('hero_title_2'); ?></h2>
-	<div class="content-left">
-		<p><?php the_field('hero_text_2'); ?></p>
-		<a href="#faq-section" class="who-are-we__box-link">
-			<span class="link">Kontakta oss</span>
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="Pil" />
-		</a>
-	</div>
-</section>
-
 <!-- Högstadiet / Gymnasiet - File system -->
 <div class="tabset">
   <!-- Tab 1 - Högstadiet -->
@@ -74,9 +62,9 @@ Template Name: Elever
         </div>
         
         <!-- Middle column - picture -->
-        <div class="column middle">
+        <!-- <div class="column middle">
           <img class="decoration-img" src="<?php the_field('hogstadiet_dekoration'); ?>" alt="Kretskort. Dekoration.">
-        </div>
+        </div> -->
         
         <!-- Right column -->
         <div class="column right">
@@ -122,9 +110,9 @@ Template Name: Elever
         </div>
         
         <!-- Mittenkolumn med diagram/bild -->
-        <div class="column middle">
+       <!--  <div class="column middle">
           <img class="decoration-img" src="<?php the_field('gymnasiet_dekoration'); ?>" alt="Kretskort. Dekoration.">
-        </div>
+        </div> -->
         
         <!-- Höger kolumn -->
         <div class="column right">
@@ -148,6 +136,18 @@ Template Name: Elever
     </section>
   </div>
 </div>
+
+<!-- GlimtIn to your school -->
+<section class="glimti-for-students">
+	<h2><?php the_field('hero_title_2'); ?></h2>
+	<div class="content-left">
+		<p><?php the_field('hero_text_2'); ?></p>
+		<a href="#faq-section" class="who-are-we__box-link">
+			<span class="link">Kontakta oss</span>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.svg" alt="Pil" />
+		</a>
+	</div>
+</section>
 
 <!-- Engineer Inspo Section -->
 <section class="engineer-inspo">

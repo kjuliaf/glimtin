@@ -159,9 +159,10 @@ p {
   }
   
   .tab-panel {
-	/*padding: 30px;*/
+	padding: 30px;
 	border-top: 1px solid #b694da;
 	background-color: #e6d7f0;
+	width: 100vw;
   }
   
   .tab-content {
@@ -172,7 +173,7 @@ p {
   }
   
   .column {
-	width: 30%;
+	width: 45%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -420,13 +421,6 @@ p {
 /* General styling */
 .page-heading {
 	font-size: 2em;
-}
-
-.footer {
-    position: relative;
-    margin-top: 0;
-    padding-top: 0;
-    z-index: 1;
 }
 
 /* Mediastyling */

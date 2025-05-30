@@ -16,19 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let isDeleting = false;
   let isActive = true;
 
-  // Starta blinkande markör (och spara interval-ID)
-  const blinkInterval = setInterval(() => {
-    cursorElement.style.visibility = (cursorElement.style.visibility === "hidden") ? "visible" : "hidden";
-  }, 500);
-
-  // Stoppa efter 1 minut
-  setTimeout(() => {
-    isActive = false;
-    textElement.textContent = ""; // valfritt: töm texten
-    cursorElement.style.visibility = "hidden"; // döljer markören
-    clearInterval(blinkInterval); // 🛑 Stoppar blink
-  }, 60000);
-
   function typeEffect() {
     if (!isActive) return;
 

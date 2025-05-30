@@ -52,12 +52,13 @@ Template Name: Om oss
 		$query = new WP_Query($args);
 
 		if($query->have_posts()) :
+			$index = 0;
 			while($query->have_posts()) : $query->the_post();
 				$date = get_field('event_date');
 				$title = get_the_title();
 				$content = get_the_content();
 		?>
-			<div class="timeline-item">
+    		<div class="timeline-item<?php if ($index === 0) echo ' active'; ?>">
 				<div></div>
 				<div class="timeline-date"><?php the_field('dateTitle'); ?></div>
 				<div class="timeline-marker"></div> <!-- pricken -->
@@ -71,6 +72,7 @@ Template Name: Om oss
 				</div>
 			</div>  
 		<?php
+			$index++;
 			endwhile;
 			wp_reset_postdata();
 		else:

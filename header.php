@@ -21,6 +21,7 @@
 
 				<!-- Navigation for mobile -->
 				<ul id="header__nav-mobile">
+					<li class="header__nav-item <?php if (is_page('startsida')) echo 'active'; ?>""><a href="<?php echo home_url('/'); ?>">Hem</a></li>
 					<li class="header__nav-item <?php if (is_page('elever')) echo 'active'; ?>"><a href="<?php echo home_url('/elever'); ?>">För elever</a></li>
 					<li class="header__nav-item <?php if (is_page('foretag')) echo 'active'; ?>"><a href="<?php echo home_url('/foretag'); ?>">För företag</a></li>
 					<li class="header__nav-item <?php if (is_page('om-oss')) echo 'active'; ?>"><a href="<?php echo home_url('/om-oss'); ?>">Om oss</a></li>
