@@ -15,8 +15,20 @@
 	--color-neutral-000: #ffffff;
 	--color-neutral-400: #b7b7b7;
 	--color-neutral-900: #303231;
+
+	--font-normal: ibm-plex-sans, sans-serif;
+	--font-headings: the-seasons, sans-serif;
 }
 
 body {
-	@apply bg-background text-neutral-900;
+	@apply bg-background font-normal text-neutral-900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-headings text-primary font-bold;
 }
