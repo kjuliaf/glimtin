@@ -24,11 +24,15 @@ body {
 	@apply bg-background font-normal text-neutral-900;
 }
 
+p {
+	@apply leading-snug;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	@apply font-headings text-primary font-bold;
+	@apply font-headings text-primary leading-tight font-bold;
 }
