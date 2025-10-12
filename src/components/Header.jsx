@@ -1,13 +1,18 @@
-import Logo from '../assets/images/logo.svg?react';
-import Button from './UI/Button';
+import Logo from "../assets/images/logo.svg?react"
+import Button from "./UI/Button"
 
 function Header() {
 	return (
-		<header className="flex justify-between items-center px-4 py-2">
-			<Logo className="w-45 h-auto" />
-			<Button bgColor='secondary' onClick={() => alert('maila oss på: kontakt@glimtin.se')}>Kontakt</Button>
+		<header className="flex items-center justify-between px-4 py-2">
+			<Logo className="h-auto w-45" />
+			<Button
+				color="secondary"
+				onClick={() => alert("maila oss på: kontakt@glimtin.se")}
+			>
+				Kontakt
+			</Button>
 		</header>
-	);
+	)
 }
 
-export default Header;
+export default Header
