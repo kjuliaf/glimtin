@@ -5,7 +5,7 @@ function Header() {
 	return (
 		<header className="flex items-center justify-between px-4 py-2">
 			<a href="/">
-				<Logo className="h-auto w-40 md:w-45" />
+				<Logo className="h-auto w-35 sm:w-40 md:w-45" />
 			</a>
 			<Button
 				className="hidden md:block"

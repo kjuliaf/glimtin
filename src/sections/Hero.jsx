@@ -4,7 +4,7 @@ import Arrow from "../assets/icons/arrow.svg?react"
 
 function Hero() {
 	return (
-		<section className="mx-8 md:mx-12 lg:mx-20">
+		<section className="mx-8 sm:mx-10 md:mx-12 lg:mx-20">
 			<div className="mx-auto my-12 flex flex-col justify-between gap-6 md:my-2 md:flex-row md:items-center lg:max-w-320">
 				<div className="max-w-90 md:max-w-130 md:min-w-110">
 					<h1 className="text-5xl md:text-6xl lg:text-7xl">
