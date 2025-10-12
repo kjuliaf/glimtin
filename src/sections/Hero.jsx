@@ -5,10 +5,10 @@ import { Typewriter } from "react-simple-typewriter"
 
 function Hero() {
 	return (
-		<section className="mx-8 sm:mx-10 md:mx-12 lg:mx-20">
-			<div className="mx-auto my-12 flex flex-col justify-between gap-6 md:my-2 md:flex-row md:items-center lg:max-w-320">
-				<div className="max-w-90 md:max-w-130 md:min-w-110">
-					<h1 className="text-[2.75em] md:text-6xl lg:text-7xl">
+		<section className="mx-6 flex items-center sm:mx-10 sm:block md:mx-12 lg:mx-20">
+			<div className="mx-auto my-12 flex flex-col justify-between gap-6 sm:my-2 sm:flex-row sm:items-center sm:gap-2 md:gap-4 lg:max-w-320 lg:gap-14">
+				<div className="max-w-90 sm:min-w-90 md:max-w-130 md:min-w-110 lg:min-w-122">
+					<h1 className="text-5xl md:text-6xl lg:text-7xl">
 						Från studier till
 						<br />
 						<span>
@@ -32,28 +32,25 @@ function Hero() {
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
 					<Button
-						className="mt-12 hidden items-end gap-1 md:flex"
+						className="mt-12 hidden items-end gap-1 sm:flex"
 						outlined
 					>
 						Läs mer
 						<Arrow className="mb-0.5 text-current" />
 					</Button>
 				</div>
-
-				<div className="flex max-w-110 items-center justify-center md:h-150 md:max-w-120">
+				<div className="flex max-w-110 items-center justify-center sm:h-150 md:max-w-120">
 					<img
 						src={HeroImage}
 						alt=""
-						className="mt-2 rounded-2xl md:mt-0 md:aspect-11/12 md:max-h-150 md:object-cover"
+						className="mt-2 rounded-2xl sm:aspect-11/12 sm:max-h-150 sm:object-cover md:mt-0"
 					/>
 				</div>
-
-				<div className="mt-6 flex gap-2 md:hidden">
+				<div className="mt-6 flex gap-2 sm:hidden">
 					<Button className="flex items-end gap-1" outlined>
 						Läs mer
 						<Arrow className="mb-0.5 text-current" />
 					</Button>
-
 					<Button
 						color="secondary"
 						onClick={() =>

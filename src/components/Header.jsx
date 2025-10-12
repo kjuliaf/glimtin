@@ -8,7 +8,7 @@ function Header() {
 				<Logo className="h-auto w-35 sm:w-40 md:w-45" />
 			</a>
 			<Button
-				className="hidden md:block"
+				className="hidden sm:block"
 				color="secondary"
 				onClick={() => alert("maila oss på: kontakt@glimtin.se")}
 			>
