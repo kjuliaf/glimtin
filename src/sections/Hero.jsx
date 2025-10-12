@@ -5,8 +5,8 @@ import { Typewriter } from "react-simple-typewriter"
 
 function Hero() {
 	return (
-		<section className="mx-6 flex items-center sm:mx-10 sm:block md:mx-12 lg:mx-20">
-			<div className="mx-auto my-12 flex flex-col justify-between gap-6 sm:my-2 sm:flex-row sm:items-center sm:gap-2 md:gap-4 lg:max-w-320 lg:gap-14">
+		<section className="mx-4 flex items-center sm:mx-10 sm:block md:mx-12 lg:mx-20">
+			<div className="mx-auto my-8 flex flex-col justify-between gap-6 sm:my-2 sm:flex-row sm:items-center sm:gap-2 md:gap-4 lg:max-w-320 lg:gap-14">
 				<div className="max-w-90 sm:min-w-90 md:max-w-130 md:min-w-110 lg:min-w-122">
 					<h1 className="text-5xl md:text-6xl lg:text-7xl">
 						Från studier till
@@ -46,7 +46,7 @@ function Hero() {
 						className="mt-2 rounded-2xl sm:aspect-11/12 sm:max-h-150 sm:object-cover md:mt-0"
 					/>
 				</div>
-				<div className="mt-6 flex gap-2 sm:hidden">
+				<div className="mt-4 flex gap-2 sm:hidden">
 					<Button className="flex items-end gap-1" outlined>
 						Läs mer
 						<Arrow className="mb-0.5 text-current" />
