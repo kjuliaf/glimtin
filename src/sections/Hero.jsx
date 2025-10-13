@@ -31,13 +31,15 @@ function Hero() {
 					<p className="mt-3 max-w-80 text-xl md:max-w-100 md:text-2xl lg:max-w-none lg:text-3xl">
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
-					<Button
-						className="mt-12 hidden items-end gap-1 sm:flex"
-						outlined
-					>
-						Läs mer
-						<Arrow className="mb-0.5 text-current" />
-					</Button>
+					<a href="#om">
+						<Button
+							className="mt-12 hidden items-end gap-1 sm:flex md:mt-14 lg:mt-16"
+							outlined
+						>
+							Läs mer
+							<Arrow className="mb-0.5 text-current" />
+						</Button>
+					</a>
 				</div>
 				<div className="flex max-w-110 items-center justify-center sm:h-150 md:max-w-120">
 					<img
@@ -47,18 +49,15 @@ function Hero() {
 					/>
 				</div>
 				<div className="mt-4 flex gap-2 sm:hidden">
-					<Button className="flex items-end gap-1" outlined>
-						Läs mer
-						<Arrow className="mb-0.5 text-current" />
-					</Button>
-					<Button
-						color="secondary"
-						onClick={() =>
-							alert("maila oss på: kontakt@glimtin.se")
-						}
-					>
-						Kontakt
-					</Button>
+					<a href="#om">
+						<Button className="flex items-end gap-1" outlined>
+							Läs mer
+							<Arrow className="mb-0.5 text-current" />
+						</Button>
+					</a>
+					<a href="#kontakt">
+						<Button color="secondary">Kontakt</Button>
+					</a>
 				</div>
 			</div>
 		</section>

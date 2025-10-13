@@ -20,6 +20,10 @@
 	--font-headings: the-seasons, sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	@apply bg-background font-normal text-neutral-900;
 }

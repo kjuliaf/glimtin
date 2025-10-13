@@ -2,7 +2,10 @@ import CityImage from "../assets/images/city.jpeg"
 
 function About() {
 	return (
-		<section className="bg-background-medium mt-8 flex flex-col-reverse gap-8 rounded-t-4xl py-20 md:flex-row md:items-center lg:gap-12">
+		<section
+			id="om"
+			className="bg-background-medium mt-14 flex flex-col-reverse gap-8 rounded-t-4xl py-20 md:flex-row md:items-center lg:gap-12"
+		>
 			<img
 				className="m-4 max-w-120 rounded-3xl object-cover md:m-0 md:h-auto md:w-1/2 md:flex-shrink md:rounded-l-none md:rounded-r-3xl"
 				src={CityImage}

@@ -19,7 +19,7 @@ function Button({
 }) {
 	return (
 		<button
-			className={`cursor-pointer rounded-lg px-6 py-2 transition duration-200 ease-in-out ${className} ${
+			className={`cursor-pointer rounded-lg px-5 py-2 pb-2.5 transition duration-200 ease-in-out ${className} ${
 				!outlined ? colors[color] : `border ${colorOutlines[color]}`
 			}`}
 			onClick={onClick}

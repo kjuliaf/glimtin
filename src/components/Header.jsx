@@ -3,17 +3,18 @@ import Button from "./UI/Button"
 
 function Header() {
 	return (
-		<header className="flex items-center justify-between px-2 py-2 sm:px-4">
+		<header className="flex items-center justify-between px-4 py-2 sm:px-6">
 			<a href="/">
-				<Logo className="h-auto w-35 sm:w-40 md:w-45" />
+				<Logo className="h-auto w-32 sm:w-37 md:w-42" />
 			</a>
-			<Button
-				className="hidden sm:block"
-				color="secondary"
-				onClick={() => alert("maila oss på: kontakt@glimtin.se")}
-			>
-				Kontakt
-			</Button>
+			<a href="#kontakt">
+				<Button
+					className="hidden sm:block"
+					color="secondary"
+				>
+					Kontakt
+				</Button>
+			</a>
 		</header>
 	)
 }
