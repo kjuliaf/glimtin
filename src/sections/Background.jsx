@@ -1,7 +1,7 @@
 function Background() {
 	return (
-		<div className="section-wrapper">
-			<section className="section-padding-y-lg section-padding-x">
+		<section className="section-padding-y-lg section-padding-x section-center">
+			<div className="section-wrapper">
 				<h2 className="!text-accent section-heading-size">Bakgrund</h2>
 				<p className="mt-7">
 					Glimtin grundades med en tanke om att vilja ge vidare till
@@ -17,8 +17,8 @@ function Background() {
 					från grundskola till universitetsutbildning och viss del
 					arbetsliv.
 				</p>
-			</section>
-		</div>
+			</div>
+		</section>
 	)
 }
 

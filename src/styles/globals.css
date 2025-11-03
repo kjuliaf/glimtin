@@ -28,10 +28,16 @@
 		@apply py-18 md:py-28;
 	}
 	.section-padding-x {
-		@apply px-4 sm:px-10 md:px-12 lg:px-20;
+		@apply px-5 sm:px-10 md:px-12 lg:px-20;
 	}
 	.section-heading-size {
 		@apply text-3xl md:text-4xl lg:text-5xl;
+	}
+	.section-center {
+		@apply flex justify-center sm:justify-start;
+	}
+	.section-wrapper {
+		@apply max-w-130 justify-center sm:max-w-none;
 	}
 }
 

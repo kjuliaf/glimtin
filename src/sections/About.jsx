@@ -5,9 +5,9 @@ function About() {
 		<section>
 			<div
 				id="om"
-				className="bg-background-medium section-padding-y section-padding-x mt-14 flex justify-center rounded-t-4xl md:!px-0"
+				className="bg-background-medium section-padding-y section-padding-x section-center mt-14 rounded-t-4xl md:!px-0"
 			>
-				<div className="flex max-w-130 flex-col-reverse items-center gap-2 sm:max-w-none md:flex-row md:items-center md:gap-8 lg:gap-12">
+				<div className="section-wrapper flex flex-col-reverse items-center gap-2 md:flex-row md:items-center md:gap-8 lg:gap-12">
 					{" "}
 					{/* center */}
 					<img
@@ -35,12 +35,14 @@ function About() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-primary-dark section-padding-x py-12 text-lg">
-				<h3 className="!text-secondary-light">Vår vision</h3>
-				<p className="text-neutral-000 mt-2 text-2xl md:text-3xl">
-					“Att förändra bilden av teknik och göra den till en plats
-					där tjejer är med och formar världen”
-				</p>
+			<div className="bg-primary-dark section-padding-x section-center py-12 text-lg">
+				<div className="section-wrapper">
+					<h3 className="!text-secondary-light">Vår vision</h3>
+					<p className="text-neutral-000 mt-2 text-2xl md:text-3xl">
+						“Att förändra bilden av teknik och göra den till en
+						plats där tjejer är med och formar världen”
+					</p>
+				</div>
 			</div>
 		</section>
 	)
