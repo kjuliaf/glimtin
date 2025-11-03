@@ -39,6 +39,9 @@
 	.section-wrapper {
 		@apply max-w-130 justify-center sm:max-w-none;
 	}
+	.img-rounded {
+		@apply rounded-2xl md:rounded-3xl;
+	}
 }
 
 html {

@@ -45,7 +45,7 @@ function Hero() {
 					<img
 						src={HeroImage}
 						alt=""
-						className="mt-2 rounded-2xl sm:aspect-11/12 sm:max-h-150 sm:object-cover md:mt-0"
+						className="img-rounded mt-2 sm:aspect-11/12 sm:max-h-150 sm:object-cover md:mt-0"
 					/>
 				</div>
 				<div className="mt-4 flex gap-2 sm:hidden">

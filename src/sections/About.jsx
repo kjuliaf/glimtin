@@ -9,9 +9,8 @@ function About() {
 			>
 				<div className="section-wrapper flex flex-col-reverse items-center gap-2 md:flex-row md:items-center md:gap-8 lg:gap-12">
 					{" "}
-					{/* center */}
 					<img
-						className="m-5 aspect-3/2 rounded-3xl object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-120 md:flex-shrink md:rounded-l-none md:rounded-r-3xl"
+						className="img-rounded m-5 aspect-3/2 object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-120 md:flex-shrink md:rounded-l-none md:rounded-r-3xl"
 						src={CityImage}
 						alt="Foto över Umeå Väven"
 					/>
