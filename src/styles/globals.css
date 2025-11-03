@@ -20,6 +20,21 @@
 	--font-headings: the-seasons, sans-serif;
 }
 
+@layer components {
+	.section-padding-y {
+		@apply py-18 md:py-20;
+	}
+	.section-padding-y-lg {
+		@apply py-18 md:py-28;
+	}
+	.section-padding-x {
+		@apply px-4 sm:px-10 md:px-12 lg:px-20;
+	}
+	.section-heading-size {
+		@apply text-3xl md:text-4xl lg:text-5xl;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
