@@ -5,7 +5,7 @@ import TikTok from "../assets/icons/tiktok.svg"
 function Footer() {
 	return (
 		<footer
-			id="#kontakt"
+			id="kontakt"
 			className="section-padding-y-lg section-padding-x section-center bg-primary-dark rounded-t-4xl"
 		>
 			<div className="section-wrapper">
