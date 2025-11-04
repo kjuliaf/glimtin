@@ -1,6 +1,7 @@
 import HeroImage from "../assets/images/hero.jpg"
 import Button from "../components/UI/Button"
 import Arrow from "../assets/icons/arrow.svg?react"
+import ArrowWhite from "../assets/icons/arrow-white.svg?react"
 import { Typewriter } from "react-simple-typewriter"
 
 function Hero() {
@@ -31,13 +32,14 @@ function Hero() {
 					<p className="mt-3 max-w-80 text-xl md:max-w-100 md:text-2xl lg:max-w-none lg:text-3xl">
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
-					<a href="#om">
+					<a class="group inline-flex items-center" href="#om">
 						<Button
 							className="mt-12 hidden items-end gap-1 sm:flex md:mt-14 lg:mt-16"
 							outlined
 						>
 							Läs mer
-							<Arrow className="mb-0.5 text-current" />
+							<Arrow className="mb-0.5 text-current group-hover:hidden" />
+							<ArrowWhite className="mb-0.5 hidden text-current group-hover:inline" />
 						</Button>
 					</a>
 				</div>
@@ -49,10 +51,11 @@ function Hero() {
 					/>
 				</div>
 				<div className="mt-4 flex gap-2 sm:hidden">
-					<a href="#om">
+					<a class="group inline-flex items-center" href="#om">
 						<Button className="flex items-end gap-1" outlined>
 							Läs mer
-							<Arrow className="mb-0.5 text-current" />
+							<Arrow className="mb-0.5 text-current group-hover:hidden" />
+							<ArrowWhite className="mb-0.5 hidden text-current group-hover:inline" />
 						</Button>
 					</a>
 					<a href="#kontakt">

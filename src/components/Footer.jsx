@@ -30,9 +30,9 @@ function Footer() {
 					<a href="https://www.instagram.com/glimtin/">
 						<img className="w-14" src={Instagram} alt="Instagram" />
 					</a>
-					<a href="">
+					{/* <a href="">
 						<img className="w-14" src={TikTok} alt="TikTok" />
-					</a>
+					</a> */}
 				</div>
 			</div>
 		</footer>

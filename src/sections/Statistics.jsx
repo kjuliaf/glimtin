@@ -14,12 +14,12 @@ function Statistics() {
 					rapporter och forskning visar på en långsamt uppåtgående
 					kurva. Trots satsningen på kvinnor i tech är det inte mycket
 					som har förändrats senaste decenniet.{" "}
-					<span className="text-primary text-sm">
+					{/* <span className="text-primary text-sm">
 						Källa:{" "}
 						<a className="underline" href="">
 							Teknikföretagen
 						</a>
-					</span>
+					</span> */}
 				</p>
 				<h3 className="mt-10 text-xl md:text-2xl">
 					Men varför är det så viktigt med jämställdhet inom
@@ -39,7 +39,7 @@ function Statistics() {
 						</p>
 					</div>
 					<div className="bg-primary-dark card">
-						<img className="w-8" src={Spark} alt="Gnista" />
+						<img className="w-9" src={Spark} alt="Gnista" />
 						<h3 className="!text-secondary-light text-xl">
 							Bidrar till en hälsosam dynamik
 						</h3>
@@ -52,7 +52,7 @@ function Statistics() {
 						</p>
 					</div>
 					<div className="bg-secondary-light card">
-						<img className="w-8" src={Handshake} alt="Handslag" />
+						<img className="w-9" src={Handshake} alt="Handslag" />
 						<h3 className="!text-primary-dark text-xl">
 							Minskar könsklyftor
 						</h3>
