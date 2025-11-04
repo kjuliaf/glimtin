@@ -33,7 +33,7 @@ function Hero() {
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
 					<a
-						class="hidden group mt-12 sm:inline-flex items-center md:mt-14 lg:mt-16"
+						className="group mt-12 hidden items-center sm:inline-flex md:mt-14 lg:mt-16"
 						href="#om"
 					>
 						<Button
@@ -54,7 +54,7 @@ function Hero() {
 					/>
 				</div>
 				<div className="mt-4 flex gap-2 sm:hidden">
-					<a class="group inline-flex items-center" href="#om">
+					<a className="group inline-flex items-center" href="#om">
 						<Button className="flex items-end gap-1" outlined>
 							Läs mer
 							<Arrow className="mb-0.5 text-current group-hover:hidden" />

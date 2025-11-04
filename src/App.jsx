@@ -5,6 +5,7 @@ import Background from "./sections/Background"
 import Footer from "./components/Footer"
 import Statistics from "./sections/Statistics"
 import Companies from "./sections/Companies"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<Statistics />
 			<Companies />
 			<Footer />
+			<Analytics />
 		</>
 	)
 }
