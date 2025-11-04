@@ -32,9 +32,12 @@ function Hero() {
 					<p className="mt-3 max-w-80 text-xl md:max-w-100 md:text-2xl lg:max-w-none lg:text-3xl">
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
-					<a class="group inline-flex items-center" href="#om">
+					<a
+						class="group mt-12 inline-flex items-center md:mt-14 lg:mt-16"
+						href="#om"
+					>
 						<Button
-							className="mt-12 hidden items-end gap-1 sm:flex md:mt-14 lg:mt-16"
+							className="hidden items-end gap-1 sm:flex"
 							outlined
 						>
 							Läs mer
