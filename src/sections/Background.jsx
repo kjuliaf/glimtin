@@ -4,7 +4,7 @@ function Background() {
 	return (
 		<section className="section-padding-y-lg section-padding-x section-center md:pr-0">
 			<div className="section-wrapper">
-				<div className="flex flex-col justify-between gap-2 md:flex-row md:gap-8 lg:gap-12">
+				<div className="flex flex-col items-center justify-between gap-2 md:flex-row md:gap-8 lg:gap-12">
 					<div className="mb-5">
 						<h2 className="!text-accent section-heading-size">
 							Bakgrund

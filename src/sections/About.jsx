@@ -34,7 +34,7 @@ function About() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-primary-dark section-padding-x section-center py-12 text-lg">
+			<div className="bg-primary-dark section-padding-x section-center py-12 pb-15 text-lg">
 				<div className="section-wrapper">
 					<h3 className="!text-secondary-light">Vår vision</h3>
 					<p className="text-neutral-000 mt-2 text-2xl md:text-3xl">

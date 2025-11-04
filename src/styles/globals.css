@@ -9,7 +9,7 @@
 	--color-secondary-light: #f2a1c5;
 	--color-secondary: #ea68a2;
 	--color-secondary-dark: #c6457f;
-	--color-accent-light: #6fb3b3;
+	--color-accent-light: #9fcfcf;
 	--color-accent: #338282;
 	--color-accent-dark: #1c626f;
 	--color-neutral-000: #ffffff;
@@ -25,7 +25,7 @@
 		@apply py-18 md:py-20;
 	}
 	.section-padding-y-lg {
-		@apply py-18 md:py-28;
+		@apply py-18 md:py-32;
 	}
 	.section-padding-x {
 		@apply px-5 sm:px-10 md:px-12 lg:px-20;
@@ -41,6 +41,9 @@
 	}
 	.img-rounded {
 		@apply rounded-2xl md:rounded-3xl;
+	}
+	.card {
+		@apply flex aspect-square h-full w-full max-w-110 flex-col items-center justify-center gap-3 rounded-2xl p-8 text-center md:rounded-3xl;
 	}
 }
 
