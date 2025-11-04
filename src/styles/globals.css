@@ -33,6 +33,9 @@
 	.section-heading-size {
 		@apply text-3xl md:text-4xl lg:text-5xl;
 	}
+	.section-heading-size-sm {
+		@apply text-2xl md:text-3xl lg:text-4xl;
+	}
 	.section-center {
 		@apply flex justify-center sm:justify-start;
 	}
