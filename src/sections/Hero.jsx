@@ -33,7 +33,7 @@ function Hero() {
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
 					<a
-						class="group mt-12 inline-flex items-center md:mt-14 lg:mt-16"
+						class="hidden group mt-12 sm:inline-flex items-center md:mt-14 lg:mt-16"
 						href="#om"
 					>
 						<Button
