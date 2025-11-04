@@ -8,7 +8,7 @@ function Footer() {
 			id="kontakt"
 			className="section-padding-y-lg section-padding-x section-center bg-primary-dark rounded-t-4xl"
 		>
-			<div className="section-wrapper">
+			<div className="section-wrapper w-full">
 				<h2 className="section-heading-size-sm !text-secondary-light">
 					Kontakta oss
 				</h2>
