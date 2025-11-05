@@ -1,3 +1,5 @@
+import FAQ from "../components/UI/FAQ"
+
 function Companies() {
 	return (
 		<section className="section-padding-y-lg section-padding-x section-center">
@@ -11,14 +13,10 @@ function Companies() {
 					tjejer möjlighet att upptäcka, prova och inspireras av
 					teknik och ingenjörsyrket i praktiken.{" "}
 				</p>
-				{/* <h3 className="!text-accent mt-10 text-xl md:text-2xl">
+				<h3 className="!text-accent mt-10 text-xl md:text-2xl">
 					Frågor & svar
-				</h3> */}
-				{/* <div>
-					<p className="mt-5">Vad innebär det att medverka?</p>
-					<p className="mt-3">Vilken skillnad kan ni göra?</p>
-					<p className="mt-3">Hur blir man partner?</p>
-				</div> */}
+				</h3>
+				<FAQ />
 			</div>
 		</section>
 	)
