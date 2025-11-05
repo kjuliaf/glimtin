@@ -14,18 +14,22 @@ function Statistics() {
 					rapporter och forskning visar på en långsamt uppåtgående
 					kurva. Trots satsningen på kvinnor i tech är det inte mycket
 					som har förändrats senaste decenniet.{" "}
-					{/* <span className="text-primary text-sm">
+					<span className="text-primary text-sm">
 						Källa:{" "}
-						<a className="underline" href="">
+						<a
+							className="underline"
+							href="https://teknikhogskolan.se/nyheter/tre-fordelar-med-jamstalldhet-inom-tech/"
+							target="_blank"
+						>
 							Teknikföretagen
 						</a>
-					</span> */}
+					</span>
 				</p>
 				<h3 className="mt-10 text-xl md:text-2xl">
 					Men varför är det så viktigt med jämställdhet inom
 					teknikbranschen?
 				</h3>
-				<div className="mt-7 flex flex-col gap-4 lg:flex-row">
+				<div className="mt-7 grid justify-items-center gap-4 sm:grid-cols-1 md:max-w-fit md:grid-cols-2 lg:grid-cols-3">
 					<div className="bg-accent-light card">
 						<img className="w-7" src={Lightbulb} alt="Glödlampa" />
 						<h3 className="!text-accent-dark text-xl">
@@ -56,7 +60,7 @@ function Statistics() {
 						<h3 className="!text-primary-dark text-xl">
 							Minskar könsklyftor
 						</h3>
-						<p className="">
+						<p>
 							Med fler kvinnor i teknikbranschen kan vi
 							tillsammans jobba mot att bryta ohälsosamma normer
 							och minska könsklyftan på arbetsplatsen!

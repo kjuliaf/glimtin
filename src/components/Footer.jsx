@@ -24,10 +24,16 @@ function Footer() {
 				</a>
 
 				<div className="mt-12 mb-10 flex gap-1">
-					<a href="https://www.linkedin.com/company/glimtin">
+					<a
+						href="https://www.linkedin.com/company/glimtin"
+						target="_blank"
+					>
 						<img className="w-14" src={LinkedIn} alt="LinkedIn" />
 					</a>
-					<a href="https://www.instagram.com/glimtin/">
+					<a
+						href="https://www.instagram.com/glimtin/"
+						target="_blank"
+					>
 						<img className="w-14" src={Instagram} alt="Instagram" />
 					</a>
 					{/* <a href="">
