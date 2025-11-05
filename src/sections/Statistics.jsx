@@ -5,7 +5,7 @@ import Handshake from "../assets/icons/handshake.svg"
 function Statistics() {
 	return (
 		<section className="section-padding-x section-padding-y-lg section-center bg-background-medium">
-			<div className="section-wrapper">
+			<div className="section-wrapper section-restrict">
 				<h2 className="section-heading-size">
 					Ett arbete för att främja jämställdhet
 				</h2>

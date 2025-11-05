@@ -2,9 +2,9 @@ import TeamImage from "../assets/images/team.jpg"
 
 function Background() {
 	return (
-		<section className="section-padding-y-lg section-padding-x section-center md:pr-0">
-			<div className="section-wrapper mb-5">
-				<div className="flex flex-col items-center justify-between gap-2 md:flex-row md:gap-8 lg:gap-12">
+		<section className="section-padding-y-lg section-padding-x section-center md:pr-0 xl:pr-20">
+			<div className="section-wrapper section-restrict mb-5">
+				<div className="flex flex-col items-center justify-between gap-2 md:flex-row md:gap-8 lg:gap-14">
 					<div className="mb-5">
 						<h2 className="!text-accent section-heading-size">
 							Bakgrund
@@ -26,7 +26,7 @@ function Background() {
 						</p>
 					</div>
 					<img
-						className="img-rounded my-5 aspect-3/2 self-end object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-120 md:flex-shrink md:rounded-l-3xl md:rounded-r-none"
+						className="img-rounded my-5 aspect-3/2 self-end object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-120 md:flex-shrink md:rounded-l-3xl md:rounded-r-none xl:rounded-r-3xl"
 						src={TeamImage}
 						alt="Bild på Glimtin-teamet"
 					/>

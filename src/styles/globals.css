@@ -30,6 +30,9 @@
 	.section-padding-x {
 		@apply px-5 sm:px-10 md:px-12 lg:px-20;
 	}
+	.section-restrict {
+		@apply lg:!max-w-320 mx-auto w-full px-0;
+	}
 	.section-heading-size {
 		@apply text-3xl md:text-4xl lg:text-5xl;
 	}

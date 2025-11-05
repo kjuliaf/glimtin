@@ -9,7 +9,7 @@ function Hero() {
 		<section className="section-padding-x flex items-center sm:block">
 			<div className="mx-auto my-8 flex flex-col justify-between gap-6 sm:my-2 sm:flex-row sm:items-center sm:gap-2 md:gap-4 lg:max-w-320 lg:gap-14">
 				<div className="max-w-90 sm:min-w-90 md:max-w-130 md:min-w-110 lg:min-w-122">
-					<h1 className="text-5xl md:text-6xl lg:text-7xl">
+					<h1 className="text-[2.75em] md:text-6xl lg:text-7xl">
 						Från studier till
 						<br />
 						<span>
@@ -49,7 +49,7 @@ function Hero() {
 				<div className="flex max-w-110 items-center justify-center sm:h-150 md:max-w-120">
 					<img
 						src={HeroImage}
-						alt=""
+						alt="Glimtin-teamet"
 						className="img-rounded mt-2 sm:aspect-11/12 sm:max-h-150 sm:object-cover md:mt-0"
 					/>
 				</div>

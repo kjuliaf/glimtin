@@ -1,7 +1,7 @@
 function Companies() {
 	return (
 		<section className="section-padding-y-lg section-padding-x section-center">
-			<div className="section-wrapper mb-5">
+			<div className="section-wrapper section-restrict mb-5">
 				<h2 className="section-heading-size !text-accent">
 					För företag
 				</h2>
