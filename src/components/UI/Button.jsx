@@ -1,6 +1,7 @@
 const colors = {
 	primary: "bg-primary text-neutral-000 hover:bg-primary-dark",
 	secondary: "bg-secondary text-neutral-000 hover:bg-secondary-dark",
+	accent: "bg-accent text-neutral-000 hover:bg-accent-dark",
 }
 
 const colorOutlines = {

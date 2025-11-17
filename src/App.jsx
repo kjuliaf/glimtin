@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Hero from "./sections/Hero"
 import About from "./sections/About"
+import Event from "./sections/Event"
 import Background from "./sections/Background"
 import Footer from "./components/Footer"
 import Statistics from "./sections/Statistics"
@@ -13,6 +14,7 @@ function App() {
 			<Header />
 			<Hero />
 			<About />
+			<Event />
 			<Background />
 			<Statistics />
 			<Companies />

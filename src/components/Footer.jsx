@@ -14,7 +14,7 @@ function Footer() {
 				</h2>
 				<p className="text-neutral-000 mt-6 mb-8">
 					Om du har några frågor, tveka inte på att höra av dig till
-					oss
+					oss!
 				</p>
 				<a
 					className="text-neutral-000 underline"
