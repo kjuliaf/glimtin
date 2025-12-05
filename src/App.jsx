@@ -14,7 +14,6 @@ function App() {
 			<Header />
 			<Hero />
 			<About />
-			<Event />
 			<Background />
 			<Statistics />
 			<Companies />
