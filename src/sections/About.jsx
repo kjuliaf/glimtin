@@ -10,7 +10,7 @@ function About() {
 				<div className="section-wrapper section-restrict flex flex-col-reverse items-center gap-2 md:flex-row md:items-center md:gap-8 lg:gap-14">
 					{" "}
 					<img
-						className="img-rounded m-5 aspect-3/2 object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-110 md:flex-shrink md:rounded-l-none md:rounded-r-3xl xl:rounded-l-3xl"
+						className="img-rounded m-5 aspect-3/2 w-full object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-110 md:min-w-100 md:flex-shrink md:rounded-l-none md:rounded-r-3xl xl:rounded-l-3xl"
 						src={CityImage}
 						alt="Foto över Umeå Väven"
 					/>

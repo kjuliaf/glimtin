@@ -29,7 +29,7 @@ function Statistics() {
 					Men varför är det så viktigt med jämställdhet inom
 					teknikbranschen?
 				</h3>
-				<div className="mt-7 grid justify-items-center gap-4 sm:grid-cols-1 md:max-w-fit md:grid-cols-2 lg:grid-cols-3">
+				<div className="mt-7 grid w-full justify-items-center gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 					<div className="bg-accent-light card">
 						<img className="w-7" src={Lightbulb} alt="Glödlampa" />
 						<h3 className="!text-accent-dark text-xl">

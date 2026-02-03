@@ -26,7 +26,7 @@ function Background() {
 						</p>
 					</div>
 					<img
-						className="img-rounded my-5 aspect-3/2 self-end object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-120 md:flex-shrink md:rounded-l-3xl md:rounded-r-none xl:rounded-r-3xl"
+						className="img-rounded my-5 aspect-3/2 w-full self-end object-cover md:m-0 md:aspect-auto md:h-auto md:w-1/2 md:max-w-120 md:min-w-100 md:flex-shrink md:rounded-l-3xl md:rounded-r-none xl:rounded-r-3xl"
 						src={TeamImage}
 						alt="Bild på Glimtin-teamet"
 					/>
