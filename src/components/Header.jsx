@@ -7,14 +7,13 @@ function Header() {
 			<a href="/">
 				<Logo className="h-auto w-32 sm:w-37 md:w-42" />
 			</a>
-			<a href="#kontakt">
-				<Button
-					className="hidden sm:block"
-					color="secondary"
-				>
-					Kontakt
-				</Button>
-			</a>
+			<nav>
+				<ul className="text-primary mr-2 flex items-center gap-4 text-lg">
+					<li>
+						<a href="/event">Event</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 	)
 }

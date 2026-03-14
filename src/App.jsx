@@ -1,24 +1,20 @@
 import Header from "./components/Header"
-import Hero from "./sections/Hero"
-import About from "./sections/About"
-import Event from "./sections/Event"
-import Background from "./sections/Background"
-import Footer from "./components/Footer"
-import Statistics from "./sections/Statistics"
-import Companies from "./sections/Companies"
 import { Analytics } from "@vercel/analytics/react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Event from "./pages/Event"
 
 function App() {
 	return (
 		<>
-			<Header />
-			<Hero />
-			<About />
-			<Background />
-			<Statistics />
-			<Companies />
-			<Footer />
-			<Analytics />
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/event" element={<Event />} />
+				</Routes>
+				<Analytics />
+			</BrowserRouter>
 		</>
 	)
 }
