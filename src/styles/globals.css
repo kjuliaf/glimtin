@@ -84,3 +84,13 @@ h6 {
 .slick-dots li.slick-active button:before {
 	@apply text-white opacity-100;
 }
+
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+@media (max-width: 490px) {
+  .slick-dots li button:before {
+	margin-top: 30px;
+  }
+}
