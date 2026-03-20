@@ -10,7 +10,11 @@ function Header() {
 			<nav>
 				<ul className="text-primary mr-2 flex items-center gap-4 text-lg">
 					<li>
-						<a href="/event">Event</a>
+						<div>
+							<a href="/event">
+								<Button className="leading-snug">Event</Button>
+							</a>
+						</div>
 					</li>
 				</ul>
 			</nav>

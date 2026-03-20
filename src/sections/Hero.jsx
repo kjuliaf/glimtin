@@ -52,7 +52,7 @@ function Hero() {
 					<img
 						src={HeroImage}
 						alt="Glimtin-teamet"
-						className="img-rounded mt-2 sm:aspect-11/12 sm:max-h-150 sm:object-cover md:mt-0"
+						className="img-rounded mt-2 aspect-6/4 object-cover object-[0%_33%] sm:aspect-11/12 sm:max-h-150 md:mt-0"
 					/>
 				</div>
 				<div className="mt-4 flex gap-2 sm:hidden">

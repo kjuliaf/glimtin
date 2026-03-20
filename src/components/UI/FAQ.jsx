@@ -38,7 +38,7 @@ export default function FAQ() {
 						onClick={() => toggle(index)}
 					>
 						<span className="flex items-center gap-2 text-lg font-medium">
-							<span className="text-accent flex h-5 w-5 items-center justify-center">
+							<span className="text-accent-dark flex h-5 w-5 items-center justify-center">
 								{openItems[index] ? "−" : "+"}
 							</span>
 							{item.question}

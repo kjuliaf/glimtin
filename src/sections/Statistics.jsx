@@ -1,4 +1,4 @@
-import Lightbulb from "../assets/icons/lightbulb.svg"
+import Lightbulb from "../assets/icons/lightbulb-accent.svg"
 import Spark from "../assets/icons/spark.svg"
 import Handshake from "../assets/icons/handshake.svg"
 
@@ -30,12 +30,12 @@ function Statistics() {
 					teknikbranschen?
 				</h3>
 				<div className="mt-7 grid w-full justify-items-center gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-					<div className="bg-accent-light card">
+					<div className="bg-accent-dark card">
 						<img className="w-7" src={Lightbulb} alt="Glödlampa" />
-						<h3 className="!text-accent-dark text-xl">
+						<h3 className="!text-accent-light text-xl">
 							En förutsättning för innovation
 						</h3>
-						<p className="">
+						<p className="text-neutral-000">
 							Utöver frågan om inkludering och rättvisa, ger en
 							diversifierad team förutsättningar till utveckling
 							och innovation. En jämställd bransch är en

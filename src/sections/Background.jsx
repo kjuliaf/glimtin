@@ -6,7 +6,7 @@ function Background() {
 			<div className="section-wrapper section-restrict sm:mb-5">
 				<div className="flex flex-col items-center justify-between gap-2 md:flex-row md:gap-8 lg:gap-14">
 					<div className="mb-5 md:max-w-140">
-						<h2 className="!text-accent section-heading-size">
+						<h2 className="!text-accent-dark section-heading-size">
 							Bakgrund
 						</h2>
 						<p className="mt-7">

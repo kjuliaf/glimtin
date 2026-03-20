@@ -4,7 +4,7 @@ function Companies() {
 	return (
 		<section className="section-padding-y-lg section-padding-x section-center">
 			<div className="section-wrapper section-restrict sm:mb-5">
-				<h2 className="section-heading-size !text-accent">
+				<h2 className="section-heading-size !text-accent-dark">
 					För företag
 				</h2>
 				<p className="mt-7">
@@ -13,7 +13,7 @@ function Companies() {
 					tjejer möjlighet att upptäcka, prova och inspireras av
 					teknik och ingenjörsyrket i praktiken.{" "}
 				</p>
-				<h3 className="!text-accent mt-10 text-xl md:text-2xl">
+				<h3 className="!text-accent-dark mt-10 text-xl md:text-2xl">
 					Frågor & svar
 				</h3>
 				<FAQ />

@@ -3,18 +3,16 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 @theme {
-	--color-background: #fdf5ea;
-	--color-background-medium: #ffedd3;
-	--color-background-purple: #f1e8f0;
-	--color-primary-light: #a78ff0;
+	--color-background: #FFFCF5;
+	--color-background-medium: #FEF2E1;
 	--color-primary: #634396;
 	--color-primary-dark: #3d316b;
 	--color-secondary-light: #f2a1c5;
 	--color-secondary: #ea68a2;
 	--color-secondary-dark: #c6457f;
-	--color-accent-light: #9fcfcf;
-	--color-accent: #338282;
-	--color-accent-dark: #1c626f;
+	--color-accent-light: #E2EEC4;
+	--color-accent: #73B1A8;
+	--color-accent-dark: #037261;
 	--color-neutral-000: #ffffff;
 	--color-neutral-400: #b7b7b7;
 	--color-neutral-900: #303231;
