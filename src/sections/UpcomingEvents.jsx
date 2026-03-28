@@ -10,18 +10,20 @@ function UpcomingEvents() {
 							Inspirera(s) med oss!
 						</h2>
 						<p className="mt-7">
-							Vi planerar redan nästa event - håll utkik!
+							Vi planerar kontinuerligt nya event och aktiviteter
+							- håll utkik!
 						</p>
 						<p className="mt-4 lg:mt-6">
-							Om du har frågor eller vill delta som elev,
-							företagsrepresentant eller beslutsfattare{" "}
+							Om du som elev, företagsrepresentant eller
+							beslutsfattare har frågor om våra event eller andra
+							initiativ{" "}
 							<a
 								className="text-primary underline"
 								href="#kontakt"
 							>
 								hör av dig
 							</a>{" "}
-							till oss redan nu.
+							till oss.
 						</p>
 					</div>
 					<img

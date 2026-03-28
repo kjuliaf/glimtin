@@ -11,9 +11,9 @@ function Header() {
 				<ul className="text-primary mr-2 flex items-center gap-4 text-lg">
 					<li>
 						<div>
-							<a href="/event">
-								<Button className="leading-snug">Event</Button>
-							</a>
+							<Button className="leading-snug" link="/event">
+								Event
+							</Button>
 						</div>
 					</li>
 				</ul>

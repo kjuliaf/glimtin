@@ -33,19 +33,18 @@ function Hero() {
 						– för tjejer som vill forma framtiden med ingenjörskap
 					</p>
 					<div className="mt-12 hidden items-center gap-2 sm:flex md:mt-14 lg:mt-16">
-						<a className="group sm:inline-flex" href="#om">
-							<Button
-								className="hidden items-end gap-1 sm:flex"
-								outlined
-							>
-								Läs mer
-								<Arrow className="mb-0.5 text-current group-hover:hidden" />
-								<ArrowWhite className="mb-0.5 hidden text-current group-hover:inline" />
-							</Button>
-						</a>
-						<a href="#kontakt">
-							<Button color="secondary">Kontakt</Button>
-						</a>
+						<Button
+							className="hidden items-end gap-1 sm:flex"
+							outlined
+							link="/#om"
+						>
+							Läs mer
+							<Arrow className="mb-0.5 text-current group-hover:hidden" />
+							<ArrowWhite className="mb-0.5 hidden text-current group-hover:inline" />
+						</Button>
+						<Button color="secondary" link="/#kontakt">
+							Kontakt
+						</Button>
 					</div>
 				</div>
 				<div className="flex max-w-110 items-center justify-center sm:h-150 md:max-w-120">
@@ -56,16 +55,18 @@ function Hero() {
 					/>
 				</div>
 				<div className="mt-4 flex gap-2 sm:hidden">
-					<a className="group inline-flex items-center" href="#om">
-						<Button className="flex items-end gap-1" outlined>
-							Läs mer
-							<Arrow className="mb-0.5 text-current group-hover:hidden" />
-							<ArrowWhite className="mb-0.5 hidden text-current group-hover:inline" />
-						</Button>
-					</a>
-					<a href="#kontakt">
-						<Button color="secondary">Kontakt</Button>
-					</a>
+					<Button
+						className="flex items-end gap-1"
+						outlined
+						link="/#om"
+					>
+						Läs mer
+						<Arrow className="mb-0.5 text-current group-hover:hidden" />
+						<ArrowWhite className="mb-0.5 hidden text-current group-hover:inline" />
+					</Button>
+					<Button color="secondary" link="/#kontakt">
+						Kontakt
+					</Button>
 				</div>
 			</div>
 		</section>

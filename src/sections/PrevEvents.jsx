@@ -3,11 +3,14 @@ import Spark from "./../assets/icons/spark.svg"
 import Lightbulb from "./../assets/icons/lightbulb-secondary.svg"
 import ImageCarousel from "./../components/UI/ImageCarousel"
 import Line1 from "./../assets/icons/line1.svg"
+import WorkshopEvent26 from "./WorkshopEvent26"
 
 function PrevEvents() {
 	return (
 		<section className="section-padding-x section-padding-y-lg bg-primary-dark text-background mt-6 rounded-t-4xl sm:mt-14">
 			<div className="section-wrapper section-restrict">
+				<WorkshopEvent26 />
+
 				<h2 className="section-heading-size text-secondary-light!">
 					Tidigare event
 				</h2>
