@@ -6,6 +6,8 @@ import Sparkles from "./../assets/icons/sparkles-yellow.svg"
 import Download from "./../assets/icons/download.svg"
 import DownloadPrimary from "./../assets/icons/download-primary.svg"
 import Button from "./../components/UI/Button"
+import StudentWSInfo from "../assets/resources/Inbjudan-Elever-WS.pdf"
+import CompanyWSInfo from "../assets/resources/Inbjudan-Workshop.pdf"
 
 function WorkshopEvent26() {
 	return (
@@ -57,7 +59,7 @@ function WorkshopEvent26() {
 						<a
 							className="text-secondary-light underline"
 							href="https://docs.google.com/forms/d/e/1FAIpQLSdYOI93gab9GYtEhHcgCjijXGQiv5btNRi9yOyn-4g6XLpEIQ/viewform?usp=header&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnPLSHhmui_g67p-1AIiYK1RQHN-p-6sH4iGEfjBeB7qwSpkGGUTUpI4v5DV0_aem_X2NnsB1ySD1gFZncg5ujTQ"
-							target="__blank__"
+							target="_blank"
 						>
 							här
 						</a>
@@ -79,7 +81,7 @@ function WorkshopEvent26() {
 						<Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
-							link="/src/assets/resources/Inbjudan-Elever-WS.pdf"
+							link={StudentWSInfo}
 						>
 							Information för elever
 							<img src={DownloadPrimary} alt="Ladda ner" />
@@ -88,7 +90,7 @@ function WorkshopEvent26() {
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
 							outlined
-							link="/src/assets/resources/Inbjudan-Workshop.pdf"
+							link={CompanyWSInfo}
 						>
 							Information för företag
 							<img src={Download} alt="Ladda ner" />
