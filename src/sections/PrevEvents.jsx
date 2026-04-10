@@ -9,8 +9,6 @@ function PrevEvents() {
 	return (
 		<section className="section-padding-x section-padding-y-lg bg-primary-dark text-background mt-6 rounded-t-4xl sm:mt-14">
 			<div className="section-wrapper section-restrict">
-				<WorkshopEvent26 />
-
 				<h2 className="section-heading-size text-secondary-light!">
 					Tidigare event
 				</h2>
