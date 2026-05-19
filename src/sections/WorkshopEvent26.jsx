@@ -16,7 +16,7 @@ function WorkshopEvent26() {
 				Missa inte vårt workshopevent!
 			</h2>
 			<p className="mt-7">
-				Den 14 april håller vi ett workshopevent för unga tjejer och
+				Den 8 oktober håller vi ett workshopevent för unga tjejer och
 				icke-binära från högstadiet och teknikprogrammet. Förbered er
 				för en kväll där teknik möter kreativitet och framtidstro genom
 				praktiska inslag, tävlingar och aktiviteter.
@@ -29,7 +29,7 @@ function WorkshopEvent26() {
 						alt="Plats"
 						className="w-5 max-w-5 min-w-5"
 					/>
-					<p>Curiosum</p>
+					<p>Curiosum, Umeå</p>
 				</div>
 				<div className="flex items-center gap-2">
 					<img
@@ -37,7 +37,7 @@ function WorkshopEvent26() {
 						alt="Datum"
 						className="w-6 max-w-6 min-w-6"
 					/>
-					<p>14 april</p>
+					<p>8 oktober</p>
 				</div>
 				<div className="flex items-center gap-1">
 					<img
@@ -55,7 +55,8 @@ function WorkshopEvent26() {
 						Vill du som elev eller företag delta?
 					</h3>
 					<p className="mt-5">
-						Som elev kan du anmäla dig till eventet{" "}
+						Håll utkik om du som elev vill delta - anmälan öppnar inom kort.
+						{/* Som elev kan du anmäla dig till eventet{" "}
 						<a
 							className="text-secondary-light underline"
 							href="https://docs.google.com/forms/d/e/1FAIpQLSdYOI93gab9GYtEhHcgCjijXGQiv5btNRi9yOyn-4g6XLpEIQ/viewform?usp=header&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnPLSHhmui_g67p-1AIiYK1RQHN-p-6sH4iGEfjBeB7qwSpkGGUTUpI4v5DV0_aem_X2NnsB1ySD1gFZncg5ujTQ"
@@ -63,7 +64,7 @@ function WorkshopEvent26() {
 						>
 							här
 						</a>
-						.
+						. */}
 					</p>
 					<p className="mt-5">
 						Som företag kan du bidra till att väcka nyfikenhet för
@@ -78,22 +79,22 @@ function WorkshopEvent26() {
 					</p>
 
 					<div className="mt-8 flex gap-4 lg:mt-12">
-						<Button
+						{/* <Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
 							link={StudentWSInfo}
 						>
 							Information för elever
 							<img src={DownloadPrimary} alt="Ladda ner" />
-						</Button>
+						</Button> */}
 						<Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
-							outlined
+							/* outlined */
 							link={CompanyWSInfo}
 						>
 							Information för företag
-							<img src={Download} alt="Ladda ner" />
+							<img src={DownloadPrimary} alt="Ladda ner" />
 						</Button>
 					</div>
 				</div>
