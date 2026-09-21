@@ -1,13 +1,13 @@
-import DateIcon from "./../assets/icons/date.svg"
-import LocationIcon from "./../assets/icons/location.svg"
-import TimeIcon from "./../assets/icons/time.svg"
-import RobotInteraction from "./../assets/images/robot-interaction.png"
-import Sparkles from "./../assets/icons/sparkles-yellow.svg"
-import Download from "./../assets/icons/download.svg"
-import DownloadPrimary from "./../assets/icons/download-primary.svg"
-import Button from "./../components/UI/Button"
 import StudentWSInfo from "../assets/resources/Inbjudan-Elever-WS.pdf"
 import CompanyWSInfo from "../assets/resources/Inbjudan-Workshop.pdf"
+import DateIcon from "./../assets/icons/date.svg"
+import DownloadPrimary from "./../assets/icons/download-primary.svg"
+import Download from "./../assets/icons/download.svg"
+import LocationIcon from "./../assets/icons/location.svg"
+import Sparkles from "./../assets/icons/sparkles-yellow.svg"
+import TimeIcon from "./../assets/icons/time.svg"
+import RobotInteraction from "./../assets/images/robot-interaction.png"
+import Button from "./../components/UI/Button"
 
 function WorkshopEvent26() {
 	return (
@@ -55,16 +55,15 @@ function WorkshopEvent26() {
 						Vill du som elev eller företag delta?
 					</h3>
 					<p className="mt-5">
-						Håll utkik om du som elev vill delta - anmälan öppnar inom kort.
-						{/* Som elev kan du anmäla dig till eventet{" "}
+						Som elev kan du anmäla dig till eventet{" "}
 						<a
 							className="text-secondary-light underline"
-							href="https://docs.google.com/forms/d/e/1FAIpQLSdYOI93gab9GYtEhHcgCjijXGQiv5btNRi9yOyn-4g6XLpEIQ/viewform?usp=header&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnPLSHhmui_g67p-1AIiYK1RQHN-p-6sH4iGEfjBeB7qwSpkGGUTUpI4v5DV0_aem_X2NnsB1ySD1gFZncg5ujTQ"
+							href="https://forms.gle/iSauDXoMeHuFBmgw8"
 							target="_blank"
 						>
 							här
 						</a>
-						. */}
+						.
 					</p>
 					<p className="mt-5">
 						Som företag kan du bidra till att väcka nyfikenhet för
@@ -79,22 +78,22 @@ function WorkshopEvent26() {
 					</p>
 
 					<div className="mt-8 flex gap-4 lg:mt-12">
-						{/* <Button
+						<Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
 							link={StudentWSInfo}
 						>
 							Information för elever
 							<img src={DownloadPrimary} alt="Ladda ner" />
-						</Button> */}
+						</Button>
 						<Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
-							/* outlined */
+							outlined
 							link={CompanyWSInfo}
 						>
 							Information för företag
-							<img src={DownloadPrimary} alt="Ladda ner" />
+							<img src={Download} alt="Ladda ner" />
 						</Button>
 					</div>
 				</div>
