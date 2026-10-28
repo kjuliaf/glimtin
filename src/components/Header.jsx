@@ -20,7 +20,7 @@ function Header() {
 							</Button>
 							{location.pathname != "/event" && (
 								<div className="text-primary-dark absolute top-11 right-14 flex gap-0.5 text-sm">
-									<p>Missa inte vårt workshopevent!</p>
+									<p>Missa inte vårt inspirationsevent!</p>
 									<img
 										className="w-8"
 										src={ArrowCurved}

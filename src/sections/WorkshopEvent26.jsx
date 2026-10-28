@@ -1,5 +1,5 @@
 import StudentWSInfo from "../assets/resources/Inbjudan-Elever-WS.pdf"
-import CompanyWSInfo from "../assets/resources/Inbjudan-Workshop.pdf"
+import CompanyInfo from "../assets/resources/Inbjudan-Inspiration.pdf"
 import DateIcon from "./../assets/icons/date.svg"
 import DownloadPrimary from "./../assets/icons/download-primary.svg"
 import Download from "./../assets/icons/download.svg"
@@ -13,31 +13,31 @@ function WorkshopEvent26() {
 	return (
 		<>
 			<h2 className="section-heading-size text-secondary-light!">
-				Missa inte vårt workshopevent!
+				Missa inte vårt största årliga inspirationsevent!
 			</h2>
 			<p className="mt-7">
-				Den 8 oktober håller vi ett workshopevent för unga tjejer och
+				Den 3 december håller vi ett inspirationsevent för unga tjejer och
 				icke-binära från högstadiet och teknikprogrammet. Förbered er
-				för en kväll där teknik möter kreativitet och framtidstro genom
+				för en kväll där teknik möter kreativitet och framtidstro genom inspirerande presentationer,
 				praktiska inslag, tävlingar och aktiviteter.
 			</p>
 
 			<div className="mt-5 flex gap-5 text-sm sm:text-base">
-				<div className="flex items-center gap-2">
+				{/* <div className="flex items-center gap-2">
 					<img
 						src={LocationIcon}
 						alt="Plats"
 						className="w-5 max-w-5 min-w-5"
 					/>
 					<p>Curiosum, Umeå</p>
-				</div>
+				</div> */}
 				<div className="flex items-center gap-2">
 					<img
 						src={DateIcon}
 						alt="Datum"
 						className="w-6 max-w-6 min-w-6"
 					/>
-					<p>8 oktober</p>
+					<p>3 december</p>
 				</div>
 				<div className="flex items-center gap-1">
 					<img
@@ -54,7 +54,8 @@ function WorkshopEvent26() {
 					<h3 className="section-heading-size-sm text-secondary-light! lg:text-nowrap">
 						Vill du som elev eller företag delta?
 					</h3>
-					<p className="mt-5">
+					<p className="mt-5">Håll utkik! Anmälningsformuläret för dig som elev och vill delta släpps inom kort.</p>
+					{/* <p className="mt-5">
 						Som elev kan du anmäla dig till eventet{" "}
 						<a
 							className="text-secondary-light underline"
@@ -64,7 +65,7 @@ function WorkshopEvent26() {
 							här
 						</a>
 						.
-					</p>
+					</p> */}
 					<p className="mt-5">
 						Som företag kan du bidra till att väcka nyfikenhet för
 						teknik och ingenjörsyrket. Kontakta oss på{" "}
@@ -78,19 +79,19 @@ function WorkshopEvent26() {
 					</p>
 
 					<div className="mt-8 flex gap-4 lg:mt-12">
-						<Button
+						{/* <Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
 							link={StudentWSInfo}
 						>
 							Information för elever
 							<img src={DownloadPrimary} alt="Ladda ner" />
-						</Button>
+						</Button> */}
 						<Button
 							className="flex items-center gap-2 text-sm sm:text-base"
 							color="neutral"
 							outlined
-							link={CompanyWSInfo}
+							link={CompanyInfo}
 						>
 							Information för företag
 							<img src={Download} alt="Ladda ner" />
